@@ -1,0 +1,51 @@
+@import "../../../master.scss";
+
+.pagination-words {
+    display: inline-flex;
+    border-radius: 5px;
+    background: #fff;
+
+    .pagination-words-left,
+    .pagination-words-right {
+        position: relative;
+        padding: 0 1.5em 0 1.5em;
+
+        .pagination-section-button-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .action-button {
+            color: $base-color-main;
+            vertical-align: middle;
+            font-size: 13px;
+            letter-spacing: -0.5px;
+        }
+    }
+
+    .pagination-words-wrapper {
+        .pagination-word-button {
+            width: 2.5em;
+            height: 2em;
+            color: $base-color-grey;
+        }
+
+        .active-word-button {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+
+        .pagination-word-button:hover {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+    }
+
+    .pagination-words-wrapper {
+        .pagination-word-button:nth-child(n + 11) {
+            display: none;
+        }
+    }
+}

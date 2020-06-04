@@ -1,0 +1,49 @@
+@import "../../../master.scss";
+
+.pagination-arrow {
+    display: inline-flex;
+    border-radius: 5px;
+    background: #fff;
+
+    .pagination-arrow-left,
+    .pagination-arrow-right {
+        position: relative;
+        
+        .pagination-section-button-svg {
+            position: absolute;
+            width: 0.8em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .action-button {
+        padding: 0 1em 0 1em;
+        height: 1.7em;
+    }
+
+    .pagination-arrow-wrapper {
+        .pagination-arrow-buttons {
+            width: 2.5em;
+            height: 2em;
+            color: $base-color-grey;
+        }
+
+        .active-arrow-button {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+
+        .pagination-arrow-buttons:not(:nth-last-child(2)):hover {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+    }
+
+    .pagination-arrow-wrapper {
+        .pagination-arrow-buttons:nth-child(n + 5):not(:nth-last-child(-n + 2)) {
+            display: none;
+        }
+    }
+}

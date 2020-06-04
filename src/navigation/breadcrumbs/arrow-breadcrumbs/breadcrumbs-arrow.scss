@@ -1,0 +1,38 @@
+@import "../../../master.scss";
+
+.breadcrumb-arrow-section {
+    margin: 1.8em 0 1.8em 0;
+
+    .breadcrumb-arrow-content {
+        display: flex;
+        list-style-type: none;
+
+        .breadcrumb-arrow-item {
+            display: flex;
+            align-items: center;
+
+            .breadcrumb-arrow-button {
+                color: $base-color-grey;
+            }
+
+            .breadcrumb-arrow-button:hover {
+                color: $base-color-main;
+            }
+        }
+
+        .breadcrumb-arrow-item::before {
+            margin: 0 0.5em 0 0.5em;
+            width: 10px;
+            height: 10px;
+            display: flex;
+            background-image: url(../../../assets/images/breadcrumbs/arrow-right-solid.svg);
+            background-size: 10px 10px;
+            content: "";
+        }
+
+        .breadcrumb-arrow-item:first-child::before {
+            margin: 0;
+            background: none;
+        }
+    }
+}

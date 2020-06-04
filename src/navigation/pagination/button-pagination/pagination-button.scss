@@ -1,0 +1,45 @@
+@import "../../../master.scss";
+
+.pagination-buttons {
+    display: flex;
+
+    .pagination-words-left,
+    .pagination-words-right {
+        .pagination-buttons-text {
+            border-radius: 10px;
+            position: relative;
+            padding: 1em;
+            background: $base-color-grey-secondary;
+
+            .pagination-buttons-svg {
+                position: absolute;
+                width: 8px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: brightness(10);
+            }
+        }
+    }
+
+    .pagination-buttons-wrapper {
+        margin: 0 1.2em 0 1.2em;
+        padding: 1px;
+        height: 1.5em;
+        border-radius: 5px;
+        background: $base-color-grey-secondary;
+
+        .pagination-buttons-svg {
+            margin: 0 0.5em 0 0.5em;
+            vertical-align: middle;
+            width: 8px;
+            filter: brightness(10);
+        }
+
+        .pagination-buttons-info {
+            color: #fff;
+            vertical-align: middle;
+            font-size: 9px;
+        }
+    }
+}

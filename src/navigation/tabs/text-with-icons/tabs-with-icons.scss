@@ -1,0 +1,41 @@
+@import "../../../master.scss";
+
+.tab-with-icon-section {
+    width: 30em;
+
+    .tab-with-icon-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(1px, 1fr));
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .tab-with-icon-button {
+            padding-bottom: 0.5em;
+            margin-right: 1em;
+            width: max-content;
+            height: 2.5em;
+            display: flex;
+            align-items: center;
+
+            &-span {
+                color: $base-color-grey;
+            }
+
+            &-svg {
+                margin-right: 0.3em;
+                width: 0.9em;
+                height: 0.9em;
+                filter: invert(0.5);
+            }
+        }
+
+        .tab-with-icon-button:hover {
+            box-shadow: 0 2px $base-color-main;
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
+        }
+
+        .active-icon-tab {
+            box-shadow: 0 2px $base-color-main;
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
+        }
+    }
+}

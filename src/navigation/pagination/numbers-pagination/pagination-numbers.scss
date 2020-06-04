@@ -1,0 +1,25 @@
+@import "../../../master.scss";
+
+.pagination-numbers {
+    display: inline-flex;
+    border-radius: 5px;
+    background: #fff;
+
+    .pagination-numbers-wrapper {
+        .pagination-numbers-buttons {
+            width: 2.5em;
+            height: 2em;
+            color: $base-color-grey;
+        }
+
+        .active-number-button {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+
+        .pagination-numbers-buttons:hover {
+            color: $base-color-main;
+            box-shadow: 0 2px $base-color-main;
+        }
+    }
+}

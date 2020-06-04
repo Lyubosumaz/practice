@@ -1,0 +1,18 @@
+@import "../../../master.scss";
+
+.pagination-dash {
+    .pagination-dash-wrapper {
+        display: flex;
+        justify-items: baseline;
+
+        .pagination-dash-buttons {
+            margin: 0 0.5em 0 0.15em;
+            padding: 0 3.3em 0.2em 0;
+            background: $base-color-grey-secondary;
+        }
+
+        .active-dot-button {
+            background: $base-color-main;
+        }
+    }
+}

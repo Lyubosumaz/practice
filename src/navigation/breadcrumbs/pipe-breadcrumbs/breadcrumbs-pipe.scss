@@ -1,0 +1,39 @@
+@import "../../../master.scss";
+
+.breadcrumb-pipe-section {
+    padding: 0.8em;
+    display: inline-flex;
+    border-radius: 5px;
+    background: #fff;
+
+    .breadcrumb-pipe-content {
+        display: flex;
+        list-style-type: none;
+
+        .breadcrumb-pipe-item {
+            .breadcrumb-pipe-button {
+                color: $base-color-secondary;
+            }
+        }
+
+        .breadcrumb-pipe-item:last-child .breadcrumb-pipe-button {
+            color: $base-color-grey;
+        }
+
+        .breadcrumb-pipe-item:last-child:hover .breadcrumb-pipe-button {
+            color: $base-color-secondary;
+        }
+
+        .breadcrumb-pipe-item::before {
+            margin: 0 1em 0 1em;
+            font-size: 10px;
+            content: "\\";
+            color: $base-color-grey;
+        }
+
+        .breadcrumb-pipe-item:first-child::before {
+            margin: 0;
+            content: "";
+        }
+    }
+}
