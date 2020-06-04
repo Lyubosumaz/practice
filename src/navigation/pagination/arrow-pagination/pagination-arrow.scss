@@ -8,7 +8,7 @@
     .pagination-arrow-left,
     .pagination-arrow-right {
         position: relative;
-        
+
         .pagination-section-button-svg {
             position: absolute;
             width: 0.8em;
@@ -17,17 +17,24 @@
             transform: translate(-50%, -50%);
         }
     }
-    
+
     .action-button {
         padding: 0 1em 0 1em;
         height: 1.7em;
     }
 
     .pagination-arrow-wrapper {
+        display: flex;
+
         .pagination-arrow-buttons {
             width: 2.5em;
             height: 2em;
+            display: none;
             color: $base-color-grey;
+        }
+
+        .show-button {
+            display: block;
         }
 
         .active-arrow-button {
@@ -41,9 +48,9 @@
         }
     }
 
-    .pagination-arrow-wrapper {
-        .pagination-arrow-buttons:nth-child(n + 5):not(:nth-last-child(-n + 2)) {
-            display: none;
-        }
-    }
+    // .pagination-arrow-wrapper {
+    //     .pagination-arrow-buttons:nth-child(n + 5):not(:nth-last-child(-n + 2)) {
+    //         display: none;
+    //     }
+    // }
 }

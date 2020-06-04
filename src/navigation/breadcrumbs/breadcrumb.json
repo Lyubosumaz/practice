@@ -1,0 +1,21 @@
+{
+    "breadSections": [
+        "First Section",
+        "Second Section",
+        "Third Section",
+        "Fourth Section",
+        "Fifth Section",
+        "Sixth Section",
+        "Seventh Section",
+        "Eighth Section",
+        "Ninth Section",
+        "Tenth Section"
+    ],
+    "errorMessage": "Possible range: from 1 to 10",
+    "ArrowSmallBreadcrumb": 2,
+    "ArrowMediumBreadcrumb": 3,
+    "ArrowLargeBreadcrumb": 4,
+    "PipeSmallBreadcrumb": 2,
+    "PipeMediumBreadcrumb": 3,
+    "PipeLargeBreadcrumb": 4
+}

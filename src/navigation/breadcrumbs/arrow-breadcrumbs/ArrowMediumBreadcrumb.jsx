@@ -1,16 +1,15 @@
 import React from 'react';
-import CreateArrowBreadcrumb from './CreateArrowBreadcrumb'
-
+import CreateArrowBreadcrumbButtons from '../CreateArrowBreadcrumbButtons';
+import SetBreadcrumbsButtons from '../SetBreadcrumbsArray';
+import breadcrumb from '../breadcrumb.json';
 
 export default function ArrowMediumBreadcrumb() {
-
-    const sections = [
-        { id: 1, name: 'First Section' },
-        { id: 2, name: 'Second Section' },
-        { id: 3, name: 'Third Section' },
-    ];
-
+    const componentNumber = breadcrumb.ArrowMediumBreadcrumb;
+    const validation = componentNumber >= 1 && componentNumber <= 10;
+    const number = validation
+        ? componentNumber
+        : breadcrumb.errorMessage;
     return (
-        <CreateArrowBreadcrumb arraySections={sections} />
+        <CreateArrowBreadcrumbButtons arraySections={SetBreadcrumbsButtons({ numberOfBreadcrumb: number })} />
     );
 }

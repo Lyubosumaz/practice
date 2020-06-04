@@ -21,8 +21,8 @@ import SimpleButtonPagination from '../navigation/pagination/button-pagination/S
 import './app.scss';
 import '../navigation/tabs/text-only/tabs-text.scss';
 import '../navigation/tabs/text-with-icons/tabs-with-icons.scss';
-import '../navigation/breadcrumbs/pipe-breadcrumbs/breadcrumbs-pipe.scss';
-import '../navigation/breadcrumbs/arrow-breadcrumbs/breadcrumbs-arrow.scss'
+import '../navigation/breadcrumbs/pipe-breadcrumbs/pipe-breadcrumbs.scss';
+import '../navigation/breadcrumbs/arrow-breadcrumbs/arrow-breadcrumbs.scss'
 import '../navigation/pagination/numbers-pagination/pagination-numbers.scss';
 import '../navigation/pagination/arrow-pagination/pagination-arrow.scss';
 import '../navigation/pagination/word-pagination/pagination-words.scss';
