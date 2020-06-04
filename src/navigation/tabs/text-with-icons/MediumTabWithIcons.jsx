@@ -7,8 +7,8 @@ import secondTab from '../../../assets/images/navigation/bolt-solid.svg';
 export default function MediumTabWithIcons() {
     const type = 'text-icon';
     const [tabs, setTabs] = useState([
-        { id: 1, name: 'Tab Name', isActive: true, image: tabName, dialogText: "red" },
-        { id: 2, name: 'Second Tab', isActive: false, image: secondTab, dialogText: "yellow" },
+        { id: 1, name: 'Tab Name', isActive: true, image: tabName, dialogText: "yellow" },
+        { id: 2, name: 'Second Tab', isActive: false, image: secondTab, dialogText: "red" },
         { id: 3, name: 'Third Tab', isActive: false, image: tabName, dialogText: "blue" },
     ]);
     const [backgroundColor, setBackgroundColor] = useState(null);
@@ -21,7 +21,8 @@ export default function MediumTabWithIcons() {
     }
 
     function handleClick(event) {
-        if (event.target.className === 'popup-dialog') {
+        event.preventDefault();
+        if (event.currentTarget.className === 'popup-dialog') {
             setBackgroundColor(null);
             setTabName(null);
         }

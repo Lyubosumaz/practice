@@ -20,7 +20,8 @@ export default function SmallTabWithIcons() {
     }
 
     function handleClick(event) {
-        if (event.target.className === 'popup-dialog') {
+        event.preventDefault();
+        if (event.currentTarget.className === 'popup-dialog') {
             setBackgroundColor(null);
             setTabName(null);
         }
