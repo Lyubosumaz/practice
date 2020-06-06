@@ -1,5 +1,4 @@
 {
-    "errorMessage": "Possible range: from 1 to 4",
     "tabsTextSections": [
         "Current Tab",
         "Second Tab",
@@ -24,10 +23,29 @@
         "type": "text-only",
         "class": "tab-text"
     },
+    "errorMessage": "Possible range: from 1 to 4",
     "tabsIconSections": [
         "Tab Name",
         "Second Tab",
         "Third Tab",
         "Fourth Tab"
-    ]
+    ],
+    "SmallTabWithIcons": {
+        "quantity": 2,
+        "active": 0,
+        "type": "text-icon",
+        "class": "tab-text"
+    },
+    "MediumTabWithIcons": {
+        "quantity": 3,
+        "active": 0,
+        "type": "text-icon",
+        "class": "tab-text"
+    },
+    "LargeTabWithIcons": {
+        "quantity": 4,
+        "active": 0,
+        "type": "text-icon",
+        "class": "tab-text"
+    }
 }

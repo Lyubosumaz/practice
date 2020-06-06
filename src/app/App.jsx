@@ -2,9 +2,9 @@ import React from 'react';
 import SmallTabText from '../navigation/tabs/text-only/SmallTabText';
 import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
 import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
-// import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
-// import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
-// import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
+import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
+import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
+import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
 import PipeSmallBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeSmallBreadcrumb';
 import PipeMediumBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeMediumBreadcrumb';
 import PipeLargeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeLargeBreadcrumb';
@@ -49,7 +49,7 @@ export default function App() {
                 <LargeTabText />
               </div>
             </div>
-            {/* <div>
+            <div>
               <div className="multi-line-position tab-position">
                 <SmallTabWithIcons />
               </div>
@@ -59,7 +59,7 @@ export default function App() {
               <div className="multi-line-position tab-position">
                 <LargeTabWithIcons />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

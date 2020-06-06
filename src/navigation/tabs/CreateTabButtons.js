@@ -33,10 +33,10 @@ export default function CreateTabButtons(props) {
                     </div>
                 </div>
             }
-            {/* {props.typeOfTab === 'text-icon' &&
+            {tabs.type === 'text-icon' &&
                 <div className="tab-with-icon-section">
                     <div className="tab-with-icon-wrapper">
-                        {props.arrayTabs.map(tab =>
+                        {tabs.array.map(tab =>
                             <button
                                 key={tab.id}
                                 className={`tab-with-icon-button ${tab.isActive ? 'active-icon-tab' : ''}`}
@@ -48,7 +48,7 @@ export default function CreateTabButtons(props) {
                         )}
                     </div>
                 </div>
-            } */}
+            }
         </Fragment>
     );
 }

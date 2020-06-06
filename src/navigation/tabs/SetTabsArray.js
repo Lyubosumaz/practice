@@ -4,10 +4,17 @@ export default function CreateBreadcrumbsButtons(props) {
     let tabsArray = [];
     if (typeof props.numberOfTabs === 'number') {
         for (let index = 0; index < props.numberOfTabs; index++) {
-            props.activeIndex === index ?
-                tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: true })
-                :
-                tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: false });
+            if (props.images) {
+                props.activeIndex === index ?
+                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], image: props.images[index], isActive: true })
+                    :
+                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], image: props.images[index], isActive: false });
+            } else {
+                props.activeIndex === index ?
+                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: true })
+                    :
+                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: false });
+            }
         }
     } else if (typeof props.numberOfTabs === 'string') {
         tabsArray.push({ err: props.numberOfTabs });

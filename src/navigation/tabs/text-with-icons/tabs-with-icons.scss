@@ -1,8 +1,6 @@
 @import "../../../master.scss";
 
 .tab-with-icon-section {
-    width: 30em;
-
     .tab-with-icon-wrapper {
         display: grid;
         grid-template-columns: repeat(4, minmax(1px, 1fr));
