@@ -21,7 +21,7 @@ export default function SimpleButtonPagination() {
             {pages.map(page => {
                 if (page.isActive) {
                     return (
-                        <div className="pagination-buttons-wrapper">
+                        <div key={page.id} className="pagination-buttons-wrapper">
                             <img className="pagination-buttons-svg" src={leftArrow} />
                             <span className="pagination-buttons-info">{page.text}/{pages.length}</span>
                             <img className="pagination-buttons-svg" src={rightArrow} />

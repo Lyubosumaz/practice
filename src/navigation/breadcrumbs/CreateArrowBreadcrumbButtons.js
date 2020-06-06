@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CreateArrowBreadcrumb(props) {
+export default function CreateArrowBreadcrumbButtons(props) {
     return (
         <nav className="breadcrumb-arrow-section">
             {!props.arraySections[0].err &&

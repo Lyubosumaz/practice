@@ -25,11 +25,13 @@
         .tab-text-button:hover {
             box-shadow: 0 2px $base-color-main;
             filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
+            z-index: 999;
         }
-
-        .active-text-tab {
+        
+        .active-tab-text {
             box-shadow: 0 2px $base-color-main;
             filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
+            z-index: 999;
         }
     }
 }

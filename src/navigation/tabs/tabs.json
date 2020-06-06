@@ -1,0 +1,21 @@
+{
+    "errorMessage": "Possible range: from 1 to 4",
+    "tabsTextSections": [
+        "Current Tab",
+        "Second Tab",
+        "Third Tab",
+        "Fourth Tab"
+    ],
+    "SmallTabText": {
+        "quantity": 2,
+        "active": 0,
+        "type": "text-only",
+        "class": "tab-text"
+    },
+    "tabsIconSections": [
+        "Tab Name",
+        "Second Tab",
+        "Third Tab",
+        "Fourth Tab"
+    ]
+}

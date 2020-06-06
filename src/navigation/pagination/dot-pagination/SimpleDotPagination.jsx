@@ -12,7 +12,7 @@ export default function SimpleDotPagination() {
         <nav className="pagination-dots">
             <div className="pagination-dots-wrapper">
                 {pages.map(page =>
-                    <button className={`pagination-dots-buttons ${page.isActive ? 'active-dot-button' : ''}`}></button>
+                    <button key={page.id} className={`pagination-dots-buttons ${page.isActive ? 'active-dot-button' : ''}`}></button>
                 )}
             </div>
         </nav>

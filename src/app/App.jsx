@@ -1,10 +1,10 @@
 import React from 'react';
 import SmallTabText from '../navigation/tabs/text-only/SmallTabText';
-import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
-import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
-import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
-import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
-import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
+// import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
+// import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
+// import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
+// import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
+// import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
 import PipeSmallBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeSmallBreadcrumb';
 import PipeMediumBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeMediumBreadcrumb';
 import PipeLargeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeLargeBreadcrumb';
@@ -19,7 +19,8 @@ import SimpleDashPagination from '../navigation/pagination/dash-pagination/Simpl
 import SimpleButtonPagination from '../navigation/pagination/button-pagination/SimpleButtonPagination';
 
 import './app.scss';
-import '../navigation/tabs/text-only/tabs-text.scss';
+import '../navigation/tabs/tab-content.scss';
+import '../navigation/tabs/text-only/tabs-with-text.scss';
 import '../navigation/tabs/text-with-icons/tabs-with-icons.scss';
 import '../navigation/breadcrumbs/pipe-breadcrumbs/pipe-breadcrumbs.scss';
 import '../navigation/breadcrumbs/arrow-breadcrumbs/arrow-breadcrumbs.scss'
@@ -41,7 +42,7 @@ export default function App() {
               <div className="multi-line-position tab-position">
                 <SmallTabText />
               </div>
-              <div className="multi-line-position tab-position">
+              {/* <div className="multi-line-position tab-position">
                 <MediumTabText />
               </div>
               <div className="multi-line-position tab-position">
@@ -57,7 +58,7 @@ export default function App() {
               </div>
               <div className="multi-line-position tab-position">
                 <LargeTabWithIcons />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

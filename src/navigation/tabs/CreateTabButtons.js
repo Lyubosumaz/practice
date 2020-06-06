@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import tabConfig from './tabs.json';
 
 export default function CreateTabButtons(props) {
-
+    const tabs = props.tabs;
     function setActiveTab(id) {
-        const arr = [...props.arrayTabs];
+        const arr = [...tabs.array];
         let clicked = '';
         for (const element of arr) {
             element.isActive = false;
@@ -17,22 +18,22 @@ export default function CreateTabButtons(props) {
 
     return (
         <Fragment>
-            {props.typeOfTab === 'text-tabs' &&
-                <div className="tab-text-section">
-                    <div className="tab-text-wrapper">
-                        {props.arrayTabs.map(tab =>
+            {tabs.type === 'text-only' &&
+                <div className={`${tabs.class}-section`}>
+                    <div className={`${tabs.class}-wrapper`}>
+                        {tabs.array.map(tab =>
                             <button
                                 key={tab.id}
-                                className={`tab-text-button ${tab.isActive ? 'active-text-tab' : ''}`}
+                                className={`${tabs.class}-button ${tab.isActive ? `active-${tabs.class}` : ''}`}
                                 onClick={() => setActiveTab(tab.id)}
                             >
-                                <span className="tab-text-button-span">{tab.name}</span>
+                                <span className={`${tabs.class}-button-span`}>{tab.name}</span>
                             </button>
                         )}
                     </div>
                 </div>
             }
-            {props.typeOfTab === 'text-icon' &&
+            {/* {props.typeOfTab === 'text-icon' &&
                 <div className="tab-with-icon-section">
                     <div className="tab-with-icon-wrapper">
                         {props.arrayTabs.map(tab =>
@@ -47,7 +48,7 @@ export default function CreateTabButtons(props) {
                         )}
                     </div>
                 </div>
-            }
+            } */}
         </Fragment>
     );
 }

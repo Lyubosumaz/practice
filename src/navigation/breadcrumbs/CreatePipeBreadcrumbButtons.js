@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CreatePipeBreadcrumb(props) {
+export default function CreatePipeBreadcrumbButtons(props) {
     return (
         <nav className="breadcrumb-pipe-section">
             {!props.arraySections[0].err &&

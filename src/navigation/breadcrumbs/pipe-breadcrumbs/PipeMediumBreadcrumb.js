@@ -1,15 +1,13 @@
 import React from 'react';
 import CreatePipeBreadcrumbButtons from '../CreatePipeBreadcrumbButtons';
-import SetBreadcrumbsButtons from '../SetBreadcrumbsArray';
+import SetBreadcrumbsArray from '../SetBreadcrumbsArray';
 import breadcrumb from '../breadcrumb.json';
 
 export default function PipeMediumBreadcrumb() {
     const componentNumber = breadcrumb.PipeMediumBreadcrumb;
     const validation = componentNumber >= 1 && componentNumber <= 10;
-    const number = validation
-        ? componentNumber
-        : breadcrumb.errorMessage;
+    const number = validation ? componentNumber : breadcrumb.errorMessage;
     return (
-        <CreatePipeBreadcrumbButtons arraySections={SetBreadcrumbsButtons({ numberOfBreadcrumb: number })} />
+        <CreatePipeBreadcrumbButtons arraySections={SetBreadcrumbsArray({ numberOfBreadcrumb: number })} />
     );
 }

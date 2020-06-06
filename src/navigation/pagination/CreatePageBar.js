@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import leftArrow from '../../assets/images/pagination/arrow-left-solid.svg';
 import rightArrow from '../../assets/images/pagination/arrow-right-solid.svg';
+import randomNumberGen from '../../utils/randomNumberGen';
 
 export default function CreatePageBar(props) {
 
@@ -52,18 +53,18 @@ export default function CreatePageBar(props) {
                             if (props.arrayPages.length - 1 === index) {
                                 // adding a element before last element
                                 return (
-                                    <Fragment>
-                                        <button
-                                            key={page.id}
-                                            className={`pagination-arrow-buttons ${page.isActive ? 'active-arrow-button' : ''} show-button`}
-                                            onClick={() => setActivePage(page.id)}
-                                            disabled={true}
-                                        >
-                                            <span>...</span>
-                                        </button>
+                                    <Fragment key={randomNumberGen()}>
                                         <button
                                             key="dots"
                                             className={`pagination-arrow-buttons ${page.isActive ? 'active-arrow-button' : ''} show-button`}
+                                            disabled={true}
+                                            >
+                                            <span>...</span>
+                                        </button>
+                                        <button
+                                            key={index}
+                                            className={`pagination-arrow-buttons ${page.isActive ? 'active-arrow-button' : ''} show-button`}
+                                            onClick={() => setActivePage(page.id)}
                                         >
                                             <span>{page.text}</span>
                                         </button>
@@ -72,7 +73,7 @@ export default function CreatePageBar(props) {
                             }
 
                             return (<button
-                                key={page.id}
+                                key={index}
                                 className={`
                                     pagination-arrow-buttons
                                     ${page.isActive ? 'active-arrow-button' : ''}
