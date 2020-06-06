@@ -12,6 +12,18 @@
         "type": "text-only",
         "class": "tab-text"
     },
+    "MediumTabText": {
+        "quantity": 3,
+        "active": 0,
+        "type": "text-only",
+        "class": "tab-text"
+    },
+    "LargeTabText": {
+        "quantity": 4,
+        "active": 0,
+        "type": "text-only",
+        "class": "tab-text"
+    },
     "tabsIconSections": [
         "Tab Name",
         "Second Tab",

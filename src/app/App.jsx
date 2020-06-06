@@ -1,7 +1,7 @@
 import React from 'react';
 import SmallTabText from '../navigation/tabs/text-only/SmallTabText';
-// import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
-// import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
+import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
+import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
 // import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
 // import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
 // import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
@@ -42,14 +42,14 @@ export default function App() {
               <div className="multi-line-position tab-position">
                 <SmallTabText />
               </div>
-              {/* <div className="multi-line-position tab-position">
+              <div className="multi-line-position tab-position">
                 <MediumTabText />
               </div>
               <div className="multi-line-position tab-position">
                 <LargeTabText />
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className="multi-line-position tab-position">
                 <SmallTabWithIcons />
               </div>
@@ -58,8 +58,8 @@ export default function App() {
               </div>
               <div className="multi-line-position tab-position">
                 <LargeTabWithIcons />
-              </div> */}
-            </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>

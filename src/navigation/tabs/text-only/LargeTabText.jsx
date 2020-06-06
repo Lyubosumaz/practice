@@ -1,38 +1,31 @@
 import React, { useState, Fragment } from 'react';
 import CreateTabButtons from '../CreateTabButtons';
+import CreateTabBlock from '../CreateTabBlock'
+import SetTabsArray from '../SetTabsArray';
+import tabsConfig from '../tabs.json';
 
 export default function LargeTabText() {
-    const type = 'text-tabs';
-    const [tabs, setTabs] = useState([
-        { id: 1, name: 'Current Tab', isActive: true, dialogText: "yellow" },
-        { id: 2, name: 'Second Tab', isActive: false, dialogText: "green" },
-        { id: 3, name: 'Third Tab', isActive: false, dialogText: "blue" },
-        { id: 4, name: 'Fourth Tab', isActive: false, dialogText: "red" },
-    ]);
-    const [backgroundColor, setBackgroundColor] = useState(null);
-    const [tabsName, setTabName] = useState(null);
-
-    function handleIsActive({ arr, clicked }) {
-        setTabs(arr);
-        setBackgroundColor(clicked.dialogText);
-        setTabName(clicked.name);
+    const data = {
+        quantity: tabsConfig.LargeTabText.quantity,
+        active: tabsConfig.LargeTabText.active,
+        type: tabsConfig.LargeTabText.type,
+        class: tabsConfig.LargeTabText.class,
     }
+    const validation = data.quantity >= 1 && data.quantity <= 4;
+    const number = validation ? data.quantity : tabsConfig.errorMessage;
+    const [tabs, setTabs] = useState(SetTabsArray({ numberOfTabs: number, activeIndex: data.active }));
+    const [tabsName, setTabName] = useState(tabsConfig.tabsTextSections[data.active]);
 
-    function handleClick(event) {
-        event.preventDefault();
-        if (event.currentTarget.className === 'popup-dialog') {
-            setBackgroundColor(null);
-            setTabName(null);
-        }
+    function handleIsActive({ arr, id, clicked }) {
+        console.log(clicked.name)
+        setTabs(arr);
+        setTabName(clicked.name);
     }
 
     return (
         <Fragment>
-            <CreateTabButtons arrayTabs={tabs} callback={handleIsActive} typeOfTab={type} />
-            {backgroundColor && <div className="popup-dialog"
-                onClick={(event) => handleClick(event)}
-                style={{ background: backgroundColor }}
-            ><span>{tabsName}</span></div>}
+            <CreateTabButtons tabs={{ type: data.type, array: tabs, class: data.class }} callback={handleIsActive} />
+            <CreateTabBlock data={tabsName} />
         </Fragment>
     );
 }

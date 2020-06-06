@@ -1,8 +1,6 @@
 @import "../../../master.scss";
 
 .tab-text-section {
-    width: 28em;
-
     .tab-text-wrapper {
         display: grid;
         grid-template-columns: repeat(4, minmax(1px, 1fr));
@@ -27,7 +25,7 @@
             filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
             z-index: 999;
         }
-        
+
         .active-tab-text {
             box-shadow: 0 2px $base-color-main;
             filter: invert(0.5) sepia(1) saturate(5) hue-rotate(205deg);
