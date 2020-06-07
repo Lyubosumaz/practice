@@ -1,7 +1,12 @@
 .tab-content {
     margin-top: 2px;
     padding: 2em 1em 2em 1em;
+    display: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     text-align: center;
+}
+
+.tab-content.show-tab-content {
+    display: block;
 }

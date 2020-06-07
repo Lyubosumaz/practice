@@ -1,5 +1,6 @@
-import breadcrumb from './breadcrumb.json';
 import PropTypes from "prop-types";
+import breadcrumb from './breadcrumb.json';
+
 export default function SetBreadcrumbsArray({ numberOfBreadcrumbs }) {
     let breadcrumbArray = [];
     const validation = numberOfBreadcrumbs >= 1 && numberOfBreadcrumbs <= 10;

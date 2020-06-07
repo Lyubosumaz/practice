@@ -1,31 +1,50 @@
 import React, { useState, Fragment } from 'react';
 import CreateTabButtons from '../CreateTabButtons';
-import CreateTabBlock from '../CreateTabBlock'
+import CreateTabContent from '../CreateTabContent'
 import SetTabsArray from '../SetTabsArray';
-import tabsConfig from '../tabs.json';
+import randomNumberGen from '../../../utils/randomNumberGen';
+import tabs from '../tabs.json';
 
 export default function SmallTabText() {
-    const data = {
-        quantity: tabsConfig.SmallTabText.quantity,
-        active: tabsConfig.SmallTabText.active,
-        type: tabsConfig.SmallTabText.type,
-        class: tabsConfig.SmallTabText.class,
-    }
-    const validation = data.quantity >= 1 && data.quantity <= 4;
-    const number = validation ? data.quantity : tabsConfig.errorMessage;
-    const [tabs, setTabs] = useState(SetTabsArray({ numberOfTabs: number, activeIndex: data.active }));
-    const [tabsName, setTabName] = useState(tabsConfig.tabsTextSections[data.active]);
+    const [arrayTabsTest, setArrayTabsTest] = useState(adapter());
+    const type = 'text';
 
-    function handleIsActive({ arr, id, clicked }) {
-        console.log(clicked.name)
-        setTabs(arr);
-        setTabName(clicked.name);
+    function adapter() {
+        let onj = {};
+        for (let index = 0; index < tabs.allTextTabsSections.length; index++) {
+            onj[index] = SetTabsArray({
+                numberOfTabs: tabs.allTextTabsSections[index].quantity,
+                activeTabIndex: tabs.allTextTabsSections[index].active
+            });
+        }
+
+        return onj;
+    }
+
+    function handleIsActive({ onj, id, clicked }) {
+        const newArrayTabsTest = Object.assign({ ...arrayTabsTest }, onj);
+        setArrayTabsTest(newArrayTabsTest);
     }
 
     return (
-        <Fragment>
-            <CreateTabButtons tabs={{ type: data.type, array: tabs, class: data.class }} callback={handleIsActive} />
-            <CreateTabBlock data={tabsName} />
+        <Fragment key={randomNumberGen()}>
+            {Object.keys(arrayTabsTest).map(keyIndex => {
+                return (
+                    <Fragment key={randomNumberGen()}>
+                        <CreateTabButtons
+                            key={[keyIndex]}
+                            type={type}
+                            array={arrayTabsTest[keyIndex]}
+                            length={{ [keyIndex]: arrayTabsTest[keyIndex].length }}
+                            callback={handleIsActive}
+                        />
+                        <CreateTabContent
+                            content={arrayTabsTest[keyIndex]}
+                        />
+                    </Fragment>
+                );
+            })
+            }
         </Fragment>
     );
 }

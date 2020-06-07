@@ -1,39 +1,44 @@
 import React, { Fragment } from 'react';
+import PropTypes from "prop-types";
 import tabConfig from './tabs.json';
 
-export default function CreateTabButtons(props) {
-    const tabs = props.tabs;
+export default function CreateTabButtons({ array, type, length, callback }) {
+
     function setActiveTab(id) {
-        const arr = [...tabs.array];
+        const onj = {};
         let clicked = '';
+        const arr = [...array];
+
         for (const element of arr) {
             element.isActive = false;
             if (element.id === id) {
                 clicked = element;
                 element.isActive = true;
             }
+            onj[Object.keys(length)] = arr;
         }
-        props.callback({ arr, id, clicked });
+
+        callback({ onj, id, clicked });
     }
 
     return (
         <Fragment>
-            {tabs.type === 'text-only' &&
-                <div className={`${tabs.class}-section`}>
-                    <div className={`${tabs.class}-wrapper`}>
-                        {tabs.array.map(tab =>
+            {type === 'text' &&
+                <div className={`tab-${type}-section`}>
+                    <div className={`tab-${type}-wrapper`}>
+                        {array.map(tab =>
                             <button
                                 key={tab.id}
-                                className={`${tabs.class}-button ${tab.isActive ? `active-${tabs.class}` : ''}`}
+                                className={`tab-${type}-button ${tab.isActive ? `active-tab-${type}` : ''}`}
                                 onClick={() => setActiveTab(tab.id)}
                             >
-                                <span className={`${tabs.class}-button-span`}>{tab.name}</span>
+                                <span className={`tab-${type}-button-span`}>{tab.name}</span>
                             </button>
                         )}
                     </div>
                 </div>
             }
-            {tabs.type === 'text-icon' &&
+            {/* {tabs.type === 'text-icon' &&
                 <div className="tab-with-icon-section">
                     <div className="tab-with-icon-wrapper">
                         {tabs.array.map(tab =>
@@ -48,7 +53,14 @@ export default function CreateTabButtons(props) {
                         )}
                     </div>
                 </div>
-            }
+             */}
         </Fragment>
     );
 }
+
+CreateTabButtons.propTypes = {
+    array: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, name: PropTypes.string })).isRequired,
+    type: PropTypes.oneOf(['text']).isRequired,
+    length: PropTypes.object.isRequired,
+    callback: PropTypes.func.isRequired,
+};

@@ -5,24 +5,23 @@
         "Third Tab",
         "Fourth Tab"
     ],
-    "SmallTabText": {
-        "quantity": 2,
-        "active": 0,
-        "type": "text-only",
-        "class": "tab-text"
-    },
-    "MediumTabText": {
-        "quantity": 3,
-        "active": 0,
-        "type": "text-only",
-        "class": "tab-text"
-    },
-    "LargeTabText": {
-        "quantity": 4,
-        "active": 0,
-        "type": "text-only",
-        "class": "tab-text"
-    },
+    "allTextTabsSections": [
+        {
+            "quantity": 2,
+            "active": 0,
+            "type": "text"
+        },
+        {
+            "quantity": 3,
+            "active": 0,
+            "type": "text"
+        },
+        {
+            "quantity": 4,
+            "active": 0,
+            "type": "text"
+        }
+    ],
     "errorMessage": "Possible range: from 1 to 4",
     "tabsIconSections": [
         "Tab Name",
