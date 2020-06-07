@@ -1,10 +1,6 @@
 import React from 'react';
-import SmallTabText from '../navigation/tabs/text-only/SmallTabText';
-// import MediumTabText from '../navigation/tabs/text-only/MediumTabText';
-// import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
-// import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
-// import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
-// import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
+import TabsWithText from '../navigation/tabs/tabs-with-text/TabsWithText';
+import TabsWithIcons from '../navigation/tabs/tabs-with-icon/TabsWithIcons';
 import PipeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
 import ArrowBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
 import SimplePagination from '../navigation/pagination/numbers-pagination/SimpleNumberPagination';
@@ -16,8 +12,8 @@ import SimpleButtonPagination from '../navigation/pagination/button-pagination/S
 
 import './app.scss';
 import '../navigation/tabs/tab-content.scss';
-import '../navigation/tabs/text-only/tabs-with-text.scss';
-import '../navigation/tabs/text-with-icons/tabs-with-icons.scss';
+import '../navigation/tabs/tabs-with-text/tabs-with-text.scss';
+import '../navigation/tabs/tabs-with-icon/tabs-with-icon.scss';
 import '../navigation/breadcrumbs/pipe-breadcrumbs/pipe-breadcrumbs.scss';
 import '../navigation/breadcrumbs/arrow-breadcrumbs/arrow-breadcrumbs.scss'
 import '../navigation/pagination/numbers-pagination/pagination-numbers.scss';
@@ -34,27 +30,11 @@ export default function App() {
         <h2>Tabs</h2>
         <div className="container">
           <div className="multi-line two-columns">
-            <div>
-              <div className="multi-line-position tab-position">
-                <SmallTabText />
-              </div>
-              {/* <div className="multi-line-position tab-position">
-                <MediumTabText />
-              </div>
-              <div className="multi-line-position tab-position">
-                <LargeTabText />
-              </div>
+            <div className="column">
+              <TabsWithText />
             </div>
-            <div>
-              <div className="multi-line-position tab-position">
-                <SmallTabWithIcons />
-              </div>
-              <div className="multi-line-position tab-position">
-                <MediumTabWithIcons />
-              </div>
-              <div className="multi-line-position tab-position">
-                <LargeTabWithIcons />
-              </div> */}
+            <div className="column">
+              <TabsWithIcons />
             </div>
           </div>
         </div>

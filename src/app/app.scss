@@ -31,12 +31,20 @@
             .multi-line-position.tab-position {
                 margin: 1em 3em 1em 0;
             }
+
+            .multi-line-position.tab-position.secondary {
+                margin: 1em 0 1em 0;
+            }
         }
 
         .two-columns {
             margin: 1em 0 1em 0;
             display: grid;
             grid-template-columns: repeat(2, minmax(30em, 36em));
+
+            .column {
+                margin-right: 1em;
+            }
         }
 
         .one-line {

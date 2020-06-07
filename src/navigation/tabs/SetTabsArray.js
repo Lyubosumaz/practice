@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
-import tabs from './tabs.json';
 
-export default function SetTabsArray({ numberOfTabs, activeTabIndex }) {
+export default function SetTabsArray({ numberOfTabs, namesOfTabs, activeTabIndex, errorMessage, tabsImages }) {
     let tabsArray = [];
     const validation = numberOfTabs >= 1 && numberOfTabs <= 4;
-    const newData = validation ? numberOfTabs : tabs.errorMessage;
+    const newData = validation ? numberOfTabs : errorMessage;
 
     switch (typeof newData) {
         case 'number':
             for (let index = 0; index < newData; index++) {
-                activeTabIndex === index ?
-                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: true })
-                    :
-                    tabsArray.push({ id: index, name: tabs.tabsTextSections[index], isActive: false });
+                tabsArray.push({ id: index, name: namesOfTabs[index], isActive: false });
+                if (activeTabIndex === index) { tabsArray[index].isActive = true; }
+                if (tabsImages) { tabsArray[index].image = tabsImages[index]; }
             }
             break;
         case 'string':
@@ -30,4 +28,7 @@ export default function SetTabsArray({ numberOfTabs, activeTabIndex }) {
 SetTabsArray.propTypes = {
     numberOfTabs: PropTypes.number.isRequired,
     activeTabIndex: PropTypes.number.isRequired,
+    namesOfTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+    errorMessage: PropTypes.string.isRequired,
+    tabsImages: PropTypes.arrayOf(PropTypes.string),
 };

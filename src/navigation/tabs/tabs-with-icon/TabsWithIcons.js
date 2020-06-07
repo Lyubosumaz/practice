@@ -5,16 +5,18 @@ import SetTabsArray from '../SetTabsArray';
 import randomNumberGen from '../../../utils/randomNumberGen';
 import tabs from '../tabs.json';
 
-export default function SmallTabText() {
+export default function TabsWithIcons() {
     const [arrayTabsTest, setArrayTabsTest] = useState(adapter());
-    const type = 'text';
 
     function adapter() {
         let onj = {};
-        for (let index = 0; index < tabs.allTextTabsSections.length; index++) {
+        for (let index = 0; index < tabs.allIconTabsSections.length; index++) {
             onj[index] = SetTabsArray({
-                numberOfTabs: tabs.allTextTabsSections[index].quantity,
-                activeTabIndex: tabs.allTextTabsSections[index].active
+                numberOfTabs: tabs.allIconTabsSections[index].quantity,
+                namesOfTabs: tabs.tabsIconSections,
+                activeTabIndex: tabs.allIconTabsSections[index].active,
+                errorMessage: tabs.errorMessage,
+                tabsImages: tabs.allIconTabsSections[index].images,
             });
         }
 
@@ -30,10 +32,9 @@ export default function SmallTabText() {
         <Fragment key={randomNumberGen()}>
             {Object.keys(arrayTabsTest).map(keyIndex => {
                 return (
-                    <Fragment key={randomNumberGen()}>
+                    <div key={keyIndex} className="multi-line-position tab-position secondary">
                         <CreateTabButtons
-                            key={[keyIndex]}
-                            type={type}
+                            type={tabs.tabsIconType}
                             array={arrayTabsTest[keyIndex]}
                             length={{ [keyIndex]: arrayTabsTest[keyIndex].length }}
                             callback={handleIsActive}
@@ -41,10 +42,9 @@ export default function SmallTabText() {
                         <CreateTabContent
                             content={arrayTabsTest[keyIndex]}
                         />
-                    </Fragment>
+                    </div>
                 );
-            })
-            }
+            })}
         </Fragment>
     );
 }
