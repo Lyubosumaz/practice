@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function CreatePipeBreadcrumbButtons(props) {
+export default function CreateArrowBreadcrumbButtons(props) {
     return (
-        <nav className="breadcrumb-pipe-section">
+        <nav className={`${props.class}-section`}>
             {!props.arraySections[0].err &&
-                <ul className="breadcrumb-pipe-content">
+                <ul className={`${props.class}-content`}>
                     {props.arraySections.map(section =>
-                        <li key={section.id} className="breadcrumb-pipe-item">
-                            <button className="breadcrumb-pipe-button">{section.name}</button>
+                        <li key={section.id} className={`${props.class}-item`}>
+                            <button className={`${props.class}-button`}>{section.name}</button>
                         </li>
                     )}
                 </ul>
