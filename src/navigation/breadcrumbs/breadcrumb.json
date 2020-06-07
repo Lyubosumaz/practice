@@ -12,6 +12,34 @@
         "Tenth Section"
     ],
     "errorMessage": "Possible range: from 1 to 10",
+    "arrowBreadcrumbs": [
+        {
+            "quantity": 2,
+            "type": "arrow"
+        },
+        {
+            "quantity": 3,
+            "type": "arrow"
+        },
+        {
+            "quantity": 4,
+            "type": "arrow"
+        }
+    ],
+    "pipeBreadcrumbs": [
+        {
+            "quantity": 2,
+            "type": "pipe"
+        },
+        {
+            "quantity": 3,
+            "type": "pipe"
+        },
+        {
+            "quantity": 4,
+            "type": "pipe"
+        }
+    ],
     "ArrowSmallBreadcrumb": 2,
     "ArrowMediumBreadcrumb": 3,
     "ArrowLargeBreadcrumb": 4,

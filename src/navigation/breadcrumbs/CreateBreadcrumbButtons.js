@@ -1,22 +1,24 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-export default function CreateArrowBreadcrumbButtons(props) {
+export default function CreateBreadcrumbButtons({ array, type }) {
     return (
-        <nav className={`${props.class}-section`}>
-            {!props.arraySections[0].err &&
-                <ul className={`${props.class}-content`}>
-                    {props.arraySections.map(section =>
-                        <li key={section.id} className={`${props.class}-item`}>
-                            <button className={`${props.class}-button`}>{section.name}</button>
+        <nav className={`breadcrumb-${type}-section`}>
+            {!array[0].err &&
+                <ul className={`breadcrumb-${type}-content`}>
+                    {array.map(section =>
+                        <li key={section.id} className={`breadcrumb-${type}-item`}>
+                            <button className={`breadcrumb-${type}-button`}>{section.name}</button>
                         </li>
                     )}
                 </ul>
             }
-            {props.arraySections[0].err &&
-                <div>
-                    {props.arraySections[0].err}
-                </div>
-            }
+            {array[0].err && <div>{array[0].err}</div>}
         </nav>
     );
 }
+
+CreateBreadcrumbButtons.propTypes = {
+    array: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, name: PropTypes.string })).isRequired,
+    type: PropTypes.oneOf(['arrow', 'pipe']).isRequired,
+};

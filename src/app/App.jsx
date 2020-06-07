@@ -5,12 +5,8 @@ import LargeTabText from '../navigation/tabs/text-only/LargeTabText';
 import SmallTabWithIcons from '../navigation/tabs/text-with-icons/SmallTabWithIcons';
 import MediumTabWithIcons from '../navigation/tabs/text-with-icons/MediumTabWithIcons';
 import LargeTabWithIcons from '../navigation/tabs/text-with-icons/LargeTabWithIcons';
-import PipeSmallBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeSmallBreadcrumb';
-import PipeMediumBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeMediumBreadcrumb';
-import PipeLargeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeLargeBreadcrumb';
-import ArrowSmallBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowSmallBreadcrumb';
-import ArrowMediumBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowMediumBreadcrumb';
-import ArrowLargeBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowLargeBreadcrumb';
+import PipeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
+import ArrowBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
 import SimplePagination from '../navigation/pagination/numbers-pagination/SimpleNumberPagination';
 import SimpleArrowPagination from '../navigation/pagination/arrow-pagination/SimpleArrowPagination';
 import SimpleWordPagination from '../navigation/pagination/word-pagination/SimpleWordPagination';
@@ -67,19 +63,9 @@ export default function App() {
         <h2>Breadcrumbs</h2>
         <div className="container">
           <div className="multi-line">
-            <div className="multi-line-position breadcrumbs-position">
-              <PipeSmallBreadcrumb />
-            </div>
-            <div className="multi-line-position breadcrumbs-position">
-              <PipeMediumBreadcrumb />
-            </div>
-            <div className="multi-line-position breadcrumbs-position">
-              <PipeLargeBreadcrumb />
-            </div>
+            <PipeBreadcrumb />
+            <ArrowBreadcrumb />
           </div>
-          <ArrowSmallBreadcrumb />
-          <ArrowMediumBreadcrumb />
-          <ArrowLargeBreadcrumb />
         </div>
       </div>
       <div className="pagination section">
