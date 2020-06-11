@@ -5,7 +5,18 @@ import SetTabsArray from '../SetTabsArray';
 import randomNumberGen from '../../../utils/randomNumberGen';
 import tabs from '../tabs.json';
 
+import svgPage from '../../../assets/images/tabs/file-regular.svg';
+import svgBolt from '../../../assets/images/tabs/bolt-solid.svg';
+import svgStopwatch from '../../../assets/images/tabs/stopwatch-solid.svg';
+import svgKey from '../../../assets/images/tabs/key-solid.svg';
+import svgFlag from '../../../assets/images/tabs/flag-regular.svg';
+
 export default function TabsWithIcons() {
+    const images = [
+        [svgPage, svgBolt],
+        [svgStopwatch, svgBolt, svgStopwatch],
+        [svgKey, svgBolt, svgStopwatch, svgFlag],
+    ];
     const [arrayTabsTest, setArrayTabsTest] = useState(adapter());
 
     function adapter() {
@@ -16,7 +27,7 @@ export default function TabsWithIcons() {
                 namesOfTabs: tabs.tabsIconSections,
                 activeTabIndex: tabs.allIconTabsSections[index].active,
                 errorMessage: tabs.errorMessage,
-                tabsImages: tabs.allIconTabsSections[index].images,
+                tabsImages: images[index],
             });
         }
 

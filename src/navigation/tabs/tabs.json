@@ -30,30 +30,15 @@
     "allIconTabsSections": [
         {
             "quantity": 2,
-            "active": 0,
-            "images": [
-                "/static/media/file-regular.1f89d962.svg",
-                "/static/media/bolt-solid.42de93f8.svg"
-            ]
+            "active": 0
         },
         {
             "quantity": 3,
-            "active": 0,
-            "images": [
-                "/static/media/stopwatch-solid.ca61bc5c.svg",
-                "/static/media/bolt-solid.42de93f8.svg",
-                "/static/media/stopwatch-solid.ca61bc5c.svg"
-            ]
+            "active": 0
         },
         {
             "quantity": 4,
-            "active": 0,
-            "images": [
-                "/static/media/key-solid.d04dfc48.svg",
-                "/static/media/bolt-solid.42de93f8.svg",
-                "/static/media/stopwatch-solid.ca61bc5c.svg",
-                "/static/media/flag-regular.07c692ba.svg"
-            ]
+            "active": 0
         }
     ],
     "errorMessage": "Possible range: from 1 to 4"
