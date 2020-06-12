@@ -3,25 +3,29 @@ import TabsWithText from '../navigation/tabs/tabs-with-text/TabsWithText';
 import TabsWithIcons from '../navigation/tabs/tabs-with-icon/TabsWithIcons';
 import PipeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
 import ArrowBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
-import SimplePagination from '../navigation/pagination/numbers-pagination/SimpleNumberPagination';
-import SimpleArrowPagination from '../navigation/pagination/arrow-pagination/SimpleArrowPagination';
-import SimpleWordPagination from '../navigation/pagination/word-pagination/SimpleWordPagination';
-import SimpleDotPagination from '../navigation/pagination/dot-pagination/SimpleDotPagination';
-import SimpleDashPagination from '../navigation/pagination/dash-pagination/SimpleDashPagination';
-import SimpleButtonPagination from '../navigation/pagination/button-pagination/SimpleButtonPagination';
+import NumberPagination from '../navigation/pagination/number-pagination/NumberPagination';
+import ArrowPagination from '../navigation/pagination/arrow-pagination/ArrowPagination';
+import WordPagination from '../navigation/pagination/word-pagination/WordPagination';
+import DotPagination from '../navigation/pagination/dot-pagination/DotPagination';
+import DashPagination from '../navigation/pagination/dash-pagination/DashPagination';
+import ButtonPagination from '../navigation/pagination/button-pagination/ButtonPagination';
 
 import './app.scss';
+// Tabs
 import '../navigation/tabs/tab-content.scss';
 import '../navigation/tabs/tabs-with-text/tabs-with-text.scss';
 import '../navigation/tabs/tabs-with-icon/tabs-with-icon.scss';
+// Breadcrumbs
 import '../navigation/breadcrumbs/pipe-breadcrumbs/pipe-breadcrumbs.scss';
 import '../navigation/breadcrumbs/arrow-breadcrumbs/arrow-breadcrumbs.scss'
-import '../navigation/pagination/numbers-pagination/pagination-numbers.scss';
-import '../navigation/pagination/arrow-pagination/pagination-arrow.scss';
-import '../navigation/pagination/word-pagination/pagination-words.scss';
-import '../navigation/pagination/dot-pagination/pagination-dot.scss';
-import '../navigation/pagination/dash-pagination/pagination-dash.scss';
-import '../navigation/pagination/button-pagination/pagination-button.scss';
+// Pagination
+import '../navigation/pagination/arrow-pagination/arrow-pagination.scss';
+import '../navigation/pagination/word-pagination/word-pagination.scss';
+// Simple Pagination
+import '../navigation/pagination/number-pagination/number-pagination.scss';
+import '../navigation/pagination/dot-pagination/dot-pagination.scss';
+import '../navigation/pagination/button-pagination/button-pagination.scss';
+import '../navigation/pagination/dash-pagination/dash-pagination.scss';
 
 export default function App() {
   return (
@@ -53,24 +57,24 @@ export default function App() {
         <div className="container">
           <div className="multi-line">
             <div className="multi-line-position">
-              <SimplePagination />
+              <NumberPagination />
             </div>
             <div className="multi-line-position">
-              <SimpleArrowPagination />
+              <ArrowPagination />
             </div>
             <div className="multi-line-position">
-              <SimpleWordPagination />
+              <WordPagination />
             </div>
           </div>
           <div className="one-line">
             <div className="one-line-position">
-              <SimpleDotPagination />
+              <DotPagination />
             </div>
             <div className="one-line-position">
-              <SimpleButtonPagination />
+              <ButtonPagination />
             </div>
             <div className="one-line-position">
-              <SimpleDashPagination />
+              <DashPagination />
             </div>
           </div>
         </div>

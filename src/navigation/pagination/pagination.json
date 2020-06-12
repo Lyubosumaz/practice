@@ -1,0 +1,33 @@
+{
+    "errorMessage": "Possible range: from 1 to 'infinity'",
+    "numberPagination": {
+        "quantity": 6,
+        "active": 2,
+        "type": "number"
+    },
+    "arrowPagination": {
+        "quantity": 22,
+        "active": 1,
+        "type": "arrow"
+    },
+    "wordPagination": {
+        "quantity": 20,
+        "active": 2,
+        "type": "word"
+    },
+    "dotPagination": {
+        "quantity": 3,
+        "active": 0,
+        "type": "dot"
+    },
+    "dashPagination": {
+        "quantity": 4,
+        "active": 0,
+        "type": "dash"
+    },
+    "buttonPagination": {
+        "quantity": 5,
+        "active": 0,
+        "type": "button"
+    }
+}
