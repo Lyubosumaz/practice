@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 
-export default function SetTabsArray({ numberOfTabs, namesOfTabs, activeTabIndex, errorMessage, tabsImages }) {
+export default function SetTabsArray({ quantity, entitle, active, validation, errorMessage, images }) {
     let tabsArray = [];
-    const validation = numberOfTabs >= 1 && numberOfTabs <= 4;
-    const newData = validation ? numberOfTabs : errorMessage;
+    const affirmation = quantity >= validation[0] && quantity <= validation[1];
+    const newData = affirmation ? quantity : errorMessage;
 
     switch (typeof newData) {
         case 'number':
             for (let index = 0; index < newData; index++) {
-                tabsArray.push({ id: index, name: namesOfTabs[index], isActive: false });
-                if (activeTabIndex === index) { tabsArray[index].isActive = true; }
-                if (tabsImages) { tabsArray[index].image = tabsImages[index]; }
+                tabsArray.push({ id: index, name: entitle[index], isActive: false });
+                if (active === index) { tabsArray[index].isActive = true; }
+                if (images) { tabsArray[index].image = images[index]; }
             }
             break;
         case 'string':
@@ -26,9 +26,10 @@ export default function SetTabsArray({ numberOfTabs, namesOfTabs, activeTabIndex
 }
 
 SetTabsArray.propTypes = {
-    numberOfTabs: PropTypes.number.isRequired,
-    activeTabIndex: PropTypes.number.isRequired,
-    namesOfTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+    quantity: PropTypes.number.isRequired,
+    entitle: PropTypes.arrayOf(PropTypes.string).isRequired,
+    active: PropTypes.number.isRequired,
+    validation: PropTypes.array.isRequired,
     errorMessage: PropTypes.string.isRequired,
-    tabsImages: PropTypes.arrayOf(PropTypes.string),
+    images: PropTypes.arrayOf(PropTypes.string),
 };

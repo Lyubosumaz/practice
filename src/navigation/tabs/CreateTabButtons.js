@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from "prop-types";
 
-export default function CreateTabButtons({ array, type, length, callback }) {
+export default function CreateTabButtons({ array, type, callback }) {
 
     function setActiveTab(id) {
-        const onj = {};
-        let clicked = '';
         const arr = [...array];
+        let clicked = '';
 
         for (const element of arr) {
             element.isActive = false;
@@ -14,10 +13,9 @@ export default function CreateTabButtons({ array, type, length, callback }) {
                 clicked = element;
                 element.isActive = true;
             }
-            onj[Object.keys(length)] = arr;
         }
 
-        callback({ onj, id, clicked });
+        callback({ arr, id, clicked });
     }
 
     return (
@@ -46,6 +44,5 @@ export default function CreateTabButtons({ array, type, length, callback }) {
 CreateTabButtons.propTypes = {
     array: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, name: PropTypes.string })).isRequired,
     type: PropTypes.oneOf(['text', 'with-icon']).isRequired,
-    length: PropTypes.object.isRequired,
     callback: PropTypes.func.isRequired,
 };

@@ -1,45 +1,80 @@
 {
-    "tabsTextType": "text",
-    "tabsTextSections": [
-        "Current Tab",
-        "Second Tab",
-        "Third Tab",
-        "Fourth Tab"
-    ],
-    "allTextTabsSections": [
-        {
-            "quantity": 2,
-            "active": 0
-        },
-        {
-            "quantity": 3,
-            "active": 0
-        },
-        {
-            "quantity": 4,
-            "active": 0
-        }
-    ],
-    "tabsIconType": "with-icon",
-    "tabsIconSections": [
-        "Tab Name",
-        "Second Tab",
-        "Third Tab",
-        "Fourth Tab"
-    ],
-    "allIconTabsSections": [
-        {
-            "quantity": 2,
-            "active": 0
-        },
-        {
-            "quantity": 3,
-            "active": 0
-        },
-        {
-            "quantity": 4,
-            "active": 0
-        }
-    ],
-    "errorMessage": "Possible range: from 1 to 4"
+    "smallTextSection": {
+        "quantity": 2,
+        "entitle": [
+            "Current Tab",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "text",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    },
+    "mediumTextSection": {
+        "quantity": 3,
+        "entitle": [
+            "Current Tab",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "text",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    },
+    "largeTextSection": {
+        "quantity": 4,
+        "entitle": [
+            "Current Tab",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "text",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    },
+    "smallIconSection": {
+        "quantity": 2,
+        "entitle": [
+            "Tab Name",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "with-icon",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    },
+    "mediumIconSection": {
+        "quantity": 3,
+        "entitle": [
+            "Tab Name",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "with-icon",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    },
+    "largeIconSection": {
+        "quantity": 4,
+        "entitle": [
+            "Tab Name",
+            "Second Tab",
+            "Third Tab",
+            "Fourth Tab"
+        ],
+        "active": 0,
+        "type": "with-icon",
+        "validation": [1, 4],
+        "errorMessage": "Possible range: from 1 to 4"
+    }
 }

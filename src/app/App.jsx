@@ -1,6 +1,10 @@
 import React from 'react';
-import TabsWithText from '../navigation/tabs/tabs-with-text/TabsWithText';
-import TabsWithIcons from '../navigation/tabs/tabs-with-icon/TabsWithIcons';
+import SmallTextSection from '../navigation/tabs/tabs-with-text/SmallTextSection';
+import MediumTextSection from '../navigation/tabs/tabs-with-text/MediumTextSection';
+import LargeTextSection from '../navigation/tabs/tabs-with-text/LargeTextSection';
+import SmallIconSection from '../navigation/tabs/tabs-with-icon/SmallIconSection';
+import MediumIconSection from '../navigation/tabs/tabs-with-icon/MediumIconSection';
+import LargeIconSection from '../navigation/tabs/tabs-with-icon/LargeIconSection';
 import PipeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
 import ArrowBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
 import NumberPagination from '../navigation/pagination/number-pagination/NumberPagination';
@@ -42,10 +46,26 @@ export default function App() {
         <div className="container">
           <div className="multi-line two-columns">
             <div className="column">
-              <TabsWithText />
+              <div className="multi-line-position tab-position">
+                <SmallTextSection />
+              </div>
+              <div className="multi-line-position tab-position">
+                <MediumTextSection />
+              </div>
+              <div className="multi-line-position tab-position">
+                <LargeTextSection />
+              </div>
             </div>
             <div className="column">
-              <TabsWithIcons />
+              <div className="multi-line-position tab-position secondary">
+                <SmallIconSection />
+              </div>
+              <div className="multi-line-position tab-position secondary">
+                <MediumIconSection />
+              </div>
+              <div className="multi-line-position tab-position secondary">
+                <LargeIconSection />
+              </div>
             </div>
           </div>
         </div>
