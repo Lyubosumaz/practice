@@ -9,6 +9,8 @@ import WordPagination from '../navigation/pagination/word-pagination/WordPaginat
 import DotPagination from '../navigation/pagination/dot-pagination/DotPagination';
 import DashPagination from '../navigation/pagination/dash-pagination/DashPagination';
 import ButtonPagination from '../navigation/pagination/button-pagination/ButtonPagination';
+import FullColorButton from '../elements/big-buttons/color-button/FullColorButton';
+import SmallButtons from '../elements/small-buttons/SmallButtons';
 
 import './app.scss';
 // Tabs
@@ -27,9 +29,14 @@ import '../navigation/pagination/dot-pagination/dot-pagination.scss';
 import '../navigation/pagination/button-pagination/button-pagination.scss';
 import '../navigation/pagination/dash-pagination/dash-pagination.scss';
 
+import '../elements/big-buttons/big-button.scss';
+import '../elements/small-buttons/small-button.scss';
+
 export default function App() {
   return (
     <div className="app">
+      <SmallButtons />
+      <FullColorButton />
       <div className="tabs section">
         <h2>Tabs</h2>
         <div className="container">
