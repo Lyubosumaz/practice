@@ -17,16 +17,17 @@ export default function ArrowPagination() {
     const [pages, setPages] = useState(SetPaginationArray(onj));
     const [endPagination, setEndPagination] = useState(null);
 
-    function handleIsActive({ arr, id, clicked }) {
-        // showButtons();
-        setShow('right');
-        setPages(arr);
+    function handleActive({ arr, id, clicked }) {
+        console.log(arr);
+        // setPages(arr);
     }
 
     function showButtons() {
         const arr = [...pages];
-        for (const iterator of arr) {
-            iterator.show = false;
+        let indexOfActiveElement = null;
+        for (let index = 0; index < arr.length; index++) {
+            arr[index].show = false;
+            if (arr[index].isActive) { indexOfActiveElement = index; }
         }
         for (let index = 0; index < arr.length; index++) {
             if (arr[index].isActive && arr[index + 4]) {
@@ -35,12 +36,13 @@ export default function ArrowPagination() {
                 }
             }
         }
+        console.log(indexOfActiveElement);
     }
 
     function handleArrows(direction) {
         let indexOfActiveElement = null;
         const newPages = [...pages];
-       
+
         const pagesWithoutDots = [...pages.slice(0, pages.length - 2), ...pages.slice(pages.length - 1)];
         console.log(pagesWithoutDots)
         console.log(newPages)
@@ -56,7 +58,7 @@ export default function ArrowPagination() {
                     }
                 }
                 setPages(newPages);
-                setShow('left');
+                showButtons()
                 break;
             case 'right':
                 for (let index = 0; index < newPages.length; index++) {
@@ -68,7 +70,7 @@ export default function ArrowPagination() {
                     }
                 }
                 setPages(newPages);
-                setShow('right');
+                showButtons()
                 break;
             default:
                 console.log('console from WordPagination')
@@ -76,82 +78,16 @@ export default function ArrowPagination() {
         }
     }
 
-    function setShow(direction) {
-        let newArray = [...pages];
-        let indexOfActiveElement = null;
-        const defaultArray = [...pages];
-        const pagesWithoutDots = [...pages.slice(0, pages.length - 2), ...pages.slice(pages.length - 1)];
-
-        switch (direction) {
-            case 'left':
-                for (let index = 0; index < pages.length; index++) {
-                    newArray[index].show = false
-                    if (pages[index].isActive) {
-                        indexOfActiveElement = index;
-                    }
-                }
-                for (let index = 0; index < newArray.length; index++) {
-                    if (indexOfActiveElement < newArray.length - 7) {
-                        newArray = defaultArray;
-                    }
-                    if (indexOfActiveElement === index) {
-                        if (newArray[index - 2]) { newArray[index - 2].show = true; }
-                        if (newArray[index - 1]) { newArray[index - 1].show = true; }
-                        newArray[index].show = true;
-                        if (newArray[index + 1]) { newArray[index + 1].show = true; }
-                        if (newArray[index + 2]) { newArray[index + 2].show = false; }
-                        if (indexOfActiveElement < newArray.length - 2) {
-                            newArray[newArray.length - 2].show = true;
-                            newArray[newArray.length - 1].show = true;
-                        }
-                    }
-                }
-
-                setPages(newArray);
-                break;
-            case 'right':
-                for (let index = 0; index < pages.length; index++) {
-                    newArray[index].show = false
-                    if (pages[index].isActive) {
-                        indexOfActiveElement = index;
-                    }
-                }
-                for (let index = 0; index < newArray.length; index++) {
-                    if (indexOfActiveElement > newArray.length - 7) {
-                        newArray = pagesWithoutDots;
-                        console.log(defaultArray)
-                    }
-
-                    if (indexOfActiveElement === index) {
-                        if (newArray[index - 2]) { newArray[index - 2].show = false; }
-                        if (newArray[index - 1]) { newArray[index - 1].show = true; }
-                        newArray[index].show = true;
-                        if (newArray[index + 1]) { newArray[index + 1].show = true; }
-                        if (newArray[index + 2]) { newArray[index + 2].show = true; }
-                        if (indexOfActiveElement < newArray.length - 2) {
-                            newArray[newArray.length - 2].show = true;
-                            newArray[newArray.length - 1].show = true;
-                        }
-                    }
-                }
-
-                setPages(newArray);
-                break;
-            default:
-                break;
-        }
-    }
-
     useEffect(() => {
+        showButtons();
         console.log('+++++++++++++++++');
-        setShow('right');
     }, []);
 
     return (
         <CreatePageBar
             type={onj.typeOfPagination}
             array={pages}
-            callback={handleIsActive}
+            callback={handleActive}
             callbackActions={handleArrows}
         />
     );

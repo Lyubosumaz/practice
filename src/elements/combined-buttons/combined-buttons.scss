@@ -1,0 +1,170 @@
+@import "../../master.scss";
+
+.combined-buttons {
+    display: flex;
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        font-weight: 600;
+
+        .combined-buttons-icon {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    .left {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .right {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .color {
+        color: #fff;
+        background: $base-color-main;
+    }
+
+    .white {
+        color: #999;
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.double-icons-S {
+    .button {
+        width: 34px;
+        height: 28px;
+    }
+}
+
+.double-icons-L {
+    .button {
+        width: 48px;
+        height: 36px;
+    }
+}
+
+.double-command-S {
+    .button {
+        width: 90px;
+        height: 28px;
+    }
+
+    .white {
+        color: #555;
+
+        .combined-buttons-icon {
+            color: #888;
+        }
+    }
+}
+
+.double-command-L {
+    .button {
+        width: 110px;
+        height: 36px;
+    }
+
+    .white {
+        color: #555;
+
+        .combined-buttons-icon {
+            color: #888;
+        }
+    }
+}
+
+.triple-letters-S {
+    .button {
+        width: 30px;
+        height: 28px;
+    }
+}
+
+.triple-letters-L {
+    .button {
+        width: 75px;
+        height: 36px;
+    }
+}
+
+.triple-date-S {
+    .button {
+        width: 50px;
+        height: 28px;
+    }
+
+    .white {
+        color: #555;
+    }
+}
+
+.triple-date-L {
+    .button {
+        width: 88px;
+        height: 36px;
+    }
+
+    .white {
+        color: #555;
+    }
+}
+
+.buttons-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.buttons-circle-S {
+    width: 28px;
+    height: 28px;
+    background: #a7e521;
+
+    .combined-buttons-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.buttons-circle-L {
+    width: 36px;
+    height: 36px;
+    background: #03c3ec;
+
+    .combined-buttons-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.buttons-buttons-social-media {
+    width: 140px;
+    height: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

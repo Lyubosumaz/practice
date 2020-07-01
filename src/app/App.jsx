@@ -13,8 +13,12 @@ import WordPagination from '../navigation/pagination/word-pagination/WordPaginat
 import DotPagination from '../navigation/pagination/dot-pagination/DotPagination';
 import DashPagination from '../navigation/pagination/dash-pagination/DashPagination';
 import ButtonPagination from '../navigation/pagination/button-pagination/ButtonPagination';
-import FullColorButton from '../elements/big-buttons/color-button/FullColorButton';
+// import FullColorButton from '../elements/big-buttons/color-button/FullColorButton';
 import SmallButtons from '../elements/small-buttons/SmallButtons';
+import BigButtons from '../elements/big-buttons/BigButtons';
+import CombinedButtons from '../elements/combined-buttons/CombinedButtons';
+
+import Inputs from '../forms/Inputs/Inputs'
 
 import './app.scss';
 // Tabs
@@ -33,14 +37,16 @@ import '../navigation/pagination/dot-pagination/dot-pagination.scss';
 import '../navigation/pagination/button-pagination/button-pagination.scss';
 import '../navigation/pagination/dash-pagination/dash-pagination.scss';
 
+
 import '../elements/big-buttons/big-button.scss';
 import '../elements/small-buttons/small-button.scss';
+import '../elements/combined-buttons/combined-buttons.scss';
+
+import '../forms/Inputs/Inputs.scss';
 
 export default function App() {
   return (
     <div className="app">
-      <SmallButtons />
-      <FullColorButton />
       <div className="tabs section">
         <h2>Tabs</h2>
         <div className="container">
@@ -100,11 +106,24 @@ export default function App() {
             <div className="one-line-position">
               <ButtonPagination />
             </div>
-            <div className="one-line-position">
-              <DashPagination />
-            </div>
           </div>
         </div>
+      </div>
+      <div className="section">
+        <h2>Big Buttons</h2>
+        <BigButtons />
+      </div>
+      <div className="section">
+        <h2>Small Buttons</h2>
+        <SmallButtons />
+      </div>
+      <div className="section">
+        <h2>Combined Buttons</h2>
+        <CombinedButtons />
+      </div>
+      <div className="section">
+        <h2>Inputs</h2>
+        <Inputs />
       </div>
     </div >
   );

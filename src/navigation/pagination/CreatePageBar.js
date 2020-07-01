@@ -43,7 +43,7 @@ export default function CreatePageBar({ array, type, callback, callbackActions }
                         <button className={`pagination-section-button-${type} action-button`} onClick={(event) => handleStartEndButtons(event)}>
                             <span className={`pagination-${type}-left`}>Prev</span></button>
                     </div>
-                    <CreatePageButtons array={array} type={type} disabled={true} />
+                    <CreatePageButtons array={array} type={type} callbackArr={handleClickPage} />
                     <div className={`pagination-${type}-right action-button`}>
                         <button className={`pagination-section-button-${type} action-button`} onClick={(event) => handleStartEndButtons(event)}><span
                             className={`pagination-words-right`}>Next</span></button>

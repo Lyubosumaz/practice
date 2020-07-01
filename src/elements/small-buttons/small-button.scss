@@ -1,31 +1,57 @@
 @import "../../master.scss";
 
 .small-button {
-    padding: 0.4em 2.6em 0.4em 2.6em;
-    border-radius: 0.5em;
+    width: 106px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4em;
+    letter-spacing: 0.04em;
+    font-size: 10px;
+    font-weight: 600;
+}
 
-    span {
-        font-size: 10px;
-        font-weight: 600;
+.small-button-with-svg {
+    .small-button-image-wrapper {
+        width: 1em;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .small-button-image {
+            width: 12px;
+            height: 12px;
+        }
     }
 
-    .full-color-main {
-        color: #fff;
-        font-weight: 600;
-        background: $base-color-main;
+    .image-right {
+        .small-button-image {
+            margin-left: 2.4em;
+        }
     }
 
-    .full-color-grey {
-        color: $base-color-grey;
-        font-weight: 600;
-        background: #d8e2ea;
+    .image-left {
+        .small-button-image {
+            margin-right: 2.6em;
+        }
     }
+}
 
-    .full-color-white {
-        color: #444;
-        font-weight: 600;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        background: #fff;
-    }
+.full-color-main {
+    color: #fff;
+    background: $base-color-main;
+}
+
+.full-color-grey {
+    color: $base-color-grey;
+    background: #d8e2ea;
+}
+
+.full-color-white {
+    color: #444;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #fff;
 }

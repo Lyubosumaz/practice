@@ -12,6 +12,10 @@ export default function NumberPagination() {
     };
     const [pages, setPages] = useState(SetPaginationArray(onj));
 
+    function handleIsActive({ arr, id, clicked }) {
+        setPages(arr);
+    }
+
     function handlePageSwap(direction) {
         const newPages = [...pages];
 
@@ -53,6 +57,6 @@ export default function NumberPagination() {
     }
 
     return (
-        <CreatePageBar type={onj.typeOfPagination} array={pages} callbackActions={handlePageSwap} />
+        <CreatePageBar type={onj.typeOfPagination} array={pages} callback={handleIsActive} callbackActions={handlePageSwap} />
     );
 }
