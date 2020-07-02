@@ -1,0 +1,47 @@
+@import "../../master.scss";
+
+.input-number-outer {
+    .input-number-outer-text {
+        color: #778699;
+        font-size: 11px;
+    }
+
+    .input-number-outer-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .box-style {
+        width: 34px;
+        height: 28px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    button.box-style {
+        font-size: 14px;
+        color: #72809d;
+        background: #f7fafc;
+    }
+
+    .input-field {
+        color: #778699;
+        border: 1px solid #dce1e7;
+    }
+
+    .button-decrease {
+        border-top: 1px solid #dce1e7;
+        border-left: 1px solid #dce1e7;
+        border-bottom: 1px solid #dce1e7;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    .button-increase {
+        border-top: 1px solid #dce1e7;
+        border-right: 1px solid #dce1e7;
+        border-bottom: 1px solid #dce1e7;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}

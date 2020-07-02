@@ -23,6 +23,22 @@ button {
   cursor: pointer;
 }
 
+input:focus,
+input[type="number"]:focus {
+  outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 $base-color-main: #a29bfe;
 $base-color-secondary: #00cec9;
 $base-color-grey: #777;

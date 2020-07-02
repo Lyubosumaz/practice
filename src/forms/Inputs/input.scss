@@ -1,0 +1,44 @@
+@import "../../master.scss";
+
+.input-block {
+    .input-block-text {
+        color: #254050;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .input-block-wrapper {
+        .input-field {
+            width: 200px;
+            height: 28px;
+            margin: 1px;
+            padding: 0 10px 0 10px;
+            box-sizing: border-box;
+            border: 1px solid #dce1e7;
+            border-radius: 6px;
+            color: #778699;
+        }
+
+        ::placeholder {
+            color: #778699;
+        }
+
+        .input-svg {
+            position: relative;
+            top: 3px;
+            right: 25px;
+        }
+
+        .input-field.error {
+            border: 1px solid #f97050;
+        }
+
+        .input-field:not(.error):hover {
+            border: 2px solid $base-color-main;
+        }
+
+        .input-field:not(.error):hover ~ .input-svg path {
+            fill: $base-color-main;
+        }
+    }
+}

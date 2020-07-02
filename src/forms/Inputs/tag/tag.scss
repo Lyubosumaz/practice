@@ -1,0 +1,54 @@
+.input-tag {
+    width: 200px;
+    height: 28px;
+    margin: 1px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #dce1e7;
+    border-radius: 6px;
+    color: #778699;
+    overflow-x: hidden;
+
+    .main-input {
+        border: none;
+    }
+
+    .tag {
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px 0 5px;
+        margin-right: 6px;
+        border-radius: 6px;
+        font-size: 12px;
+
+        .tag-name {
+            margin-right: 10px;
+        }
+    }
+
+    .green {
+        background: #faffea;
+        color: #a7e521;
+        .tag-svg path {
+            fill: #a7e521;
+        }
+    }
+
+    .red {
+        background: #ffe7e2;
+        color: #ff3e1d;
+        .tag-svg path {
+            fill: #ff3e1d;
+        }
+    }
+}
+
+.input-span {
+    color: #254050;
+    font-weight: bold;
+    font-size: 11px;
+}

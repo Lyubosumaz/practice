@@ -18,7 +18,7 @@ export default function ArrowPagination() {
     const [endPagination, setEndPagination] = useState(null);
 
     function handleActive({ arr, id, clicked }) {
-        console.log(arr);
+        // console.log(arr);
         // setPages(arr);
     }
 
@@ -36,7 +36,7 @@ export default function ArrowPagination() {
                 }
             }
         }
-        console.log(indexOfActiveElement);
+        // console.log(indexOfActiveElement);
     }
 
     function handleArrows(direction) {
@@ -80,7 +80,7 @@ export default function ArrowPagination() {
 
     useEffect(() => {
         showButtons();
-        console.log('+++++++++++++++++');
+        // console.log('+++++++++++++++++');
     }, []);
 
     return (

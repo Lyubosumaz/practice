@@ -1,0 +1,33 @@
+.url-input {
+    .url-span {
+        color: #254050;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .url-wrapper {
+        .url-protocol {
+            width: 65px;
+            height: 28px;
+            padding: 0 10px 0 10px;
+            box-sizing: border-box;
+            border-top: 1px solid #dce1e7;
+            border-left: 1px solid #dce1e7;
+            border-bottom: 1px solid #dce1e7;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            color: #778699;
+            border-left: 0;
+        }
+        .url-main {
+            width: 200px;
+            height: 28px;
+            margin: 1px;
+            padding: 0 10px 0 10px;
+            box-sizing: border-box;
+            border: 1px solid #dce1e7;
+            border-radius: 6px;
+            color: #778699;
+        }
+    }
+}
