@@ -1,70 +1,40 @@
-@import "../master.scss";
+@import "master.scss";
 
 .app {
-    padding-bottom: 4em;
-    background: $base-color-background;
-
-    h2 {
-        margin: 0.5em 0 0.5em 0;
-        padding: 0.5em 0 0.5em 3em;
-        font-weight: 500;
-        font-size: 17px;
-        color: #333;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .app-header-card {
+        margin: 3em 0 2.5em 4em;
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #2c3f58;
+        }
+        span {
+            font-weight: 400; // 500 looks better
+            color: #778699;
+        }
     }
-
-    .section {
-        .container {
-            margin-left: 3em;
-        }
-
-        .multi-line {
-            .multi-line-position {
-                margin: 1.5em 0 1.5em 0;
+    .app-container {
+        background: #fafbfd;
+        border-bottom: 1px solid #d7e1ea;
+        .container-wrapper {
+            .container-header {
+                margin-bottom: 1em;
+                h2 {
+                    padding: 1em 0 1em 4em;
+                    font-weight: 500;
+                    font-size: 17px;
+                    color: #2c3f58;
+                    border-top: 1px solid #d7e1ea;
+                    border-bottom: 1px solid #d7e1ea;
+                }
             }
-
-            .multi-line-position.breadcrumbs-position {
-                margin: 1em 0 1em 0;
+            .container-body {
+                margin-left: 4em;
             }
-
-            .multi-line-position.tab-position {
-                margin: 1em 3em 1em 0;
+            .two-columns {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(30em, 36em));
             }
-
-            .multi-line-position.tab-position.secondary {
-                margin: 1em 0 1em 0;
-            }
-        }
-
-        .two-columns {
-            margin: 1em 0 1em 0;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(30em, 36em));
-
-            .column {
-                margin-right: 1em;
-            }
-        }
-
-        .one-line {
-            display: flex;
-
-            .one-line-position:nth-child(2) {
-                margin: 0 1.8em 0 0.8em;
-            }
-        }
-
-        .popup-dialog {
-            padding: 5em;
-            top: 20%;
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid #000;
-            border-radius: 3px;
-            z-index: 999;
         }
     }
 }

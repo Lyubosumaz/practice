@@ -1,0 +1,68 @@
+{
+    "doubleIcons": {
+        "type": "doubleIcons",
+        "size": "double-icons-S",
+        "leftIcon": "faSearch",
+        "rightIcon": "faSun"
+    },
+    "doubleCommands": {
+        "type": "doubleCommands",
+        "size": "double-command-S",
+        "leftText": "Backward",
+        "leftIcon": "faAngleLeft",
+        "rightText": "Forward",
+        "rightIcon": "faAngleRight"
+    },
+    "tripleLetters": {
+        "type": "tripleLetters",
+        "size": "triple-letters-S",
+        "leftText": "S",
+        "middleText": "M",
+        "rightText": "L"
+    },
+    "tripleDate": {
+        "type": "tripleDate",
+        "size": "triple-date-S",
+        "leftText": "Daily",
+        "middleText": "Monthly",
+        "rightText": "Yearly"
+    },
+    "circleButton": {
+        "type": "circleButton",
+        "size": "buttons-circle-S",
+        "icon": "faPen"
+    },
+    "circleButtonLarge": {
+        "type": "circleButton",
+        "size": "buttons-circle-L",
+        "icon": "faSearch"
+    },
+    "doubleIconsLarge": {
+        "type": "doubleIcons",
+        "size": "double-icons-L",
+        "leftIcon": "faSearch",
+        "rightIcon": "faSun"
+    },
+    "doubleCommandsLarge": {
+        "type": "doubleCommands",
+        "size": "double-command-L",
+        "leftText": "Backward",
+        "leftIcon": "faAngleLeft",
+        "rightText": "Forward",
+        "rightIcon": "faAngleRight"
+    },
+    "tripleLettersLarge": {
+        "type": "tripleLetters",
+        "size": "triple-letters-L",
+        "leftText": "S",
+        "middleText": "M",
+        "rightText": "L"
+    },
+    "tripleDateLarge": {
+        "type": "tripleDate",
+        "size": "triple-date-L",
+        "leftText": "Daily",
+        "middleText": "Monthly",
+        "rightText": "Yearly"
+    }
+}

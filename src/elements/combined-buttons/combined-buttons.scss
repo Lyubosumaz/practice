@@ -1,4 +1,4 @@
-@import "../../master.scss";
+@import "master.scss";
 
 .combined-buttons {
     display: flex;
@@ -7,13 +7,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
-        letter-spacing: 0.04em;
+        font-size: 12px;
         font-weight: 600;
 
         .combined-buttons-icon {
-            width: 12px;
-            height: 12px;
+            width: 1.2em;
+            height: 1.2em;
         }
     }
 
@@ -48,22 +47,27 @@
 
 .double-icons-S {
     .button {
-        width: 34px;
-        height: 28px;
+        width: 3.75em;
+        height: 2.75em;
     }
 }
 
 .double-icons-L {
     .button {
-        width: 48px;
-        height: 36px;
+        width: 6em;
+        height: 3.8888em;
+
+        .combined-buttons-icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
     }
 }
 
 .double-command-S {
     .button {
-        width: 90px;
-        height: 28px;
+        width: 9.5em;
+        height: 2.75em;
     }
 
     .white {
@@ -77,8 +81,8 @@
 
 .double-command-L {
     .button {
-        width: 110px;
-        height: 36px;
+        width: 12.5em;
+        height: 3.5em;
     }
 
     .white {
@@ -92,22 +96,22 @@
 
 .triple-letters-S {
     .button {
-        width: 30px;
-        height: 28px;
+        width: 3.5em;
+        height: 2.75em;
     }
 }
 
 .triple-letters-L {
     .button {
-        width: 75px;
-        height: 36px;
+        width: 8.5em;
+        height: 3.5em;
     }
 }
 
 .triple-date-S {
     .button {
-        width: 50px;
-        height: 28px;
+        width: 6.5em;
+        height: 2.75em;
     }
 
     .white {
@@ -117,8 +121,8 @@
 
 .triple-date-L {
     .button {
-        width: 88px;
-        height: 36px;
+        width: 9em;
+        height: 3.5em;
     }
 
     .white {
@@ -135,34 +139,34 @@
 }
 
 .buttons-circle-S {
-    width: 28px;
-    height: 28px;
+    width: 2.5em;
+    height: 2.5em;
     background: #a7e521;
 
     .combined-buttons-icon {
-        width: 12px;
-        height: 12px;
+        width: 1em;
+        height: 1em;
     }
 }
 
 .buttons-circle-L {
-    width: 36px;
-    height: 36px;
+    width: 3.5em;
+    height: 3.5em;
     background: #03c3ec;
 
     .combined-buttons-icon {
-        width: 16px;
-        height: 16px;
+        width: 1.2em;
+        height: 1.2em;
     }
 }
 
 .buttons-buttons-social-media {
-    width: 140px;
-    height: 28px;
+    width: 16em;
+    height: 2.75em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.04em;
     color: #888;
     border: 1px solid #ccc;

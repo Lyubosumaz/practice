@@ -1,74 +1,56 @@
 import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CreateButtons from '../CreateButtons';
+import smallButtonsArray from './small-buttons.json';
+
 import { faSearch, faAngleDown, faCommentAlt } from '@fortawesome/free-solid-svg-icons';
+import randomNumberGen from 'utils/randomNumberGen';
 
 export default function SmallButtons() {
-    const rowStyle = {
-        marginBottom: '1.1em',
-        display: 'flex',
-        justifyContent: 'space-between',
-    };
-
+    const separateSiblings = { marginBottom: '2em', display: 'flex' };
+    const separateElements = { marginRight: '2em' };
     return (
-        <Fragment>
-            <div style={{ width: '34em' }}>
-                <div style={rowStyle}>
-                    <button className={`small-button full-color-main`}><span>Download</span></button>
-                    <button className={`small-button full-color-grey`}><span>Download</span></button>
-                    <button className={`small-button full-color-white`}><span>Download</span></button>
-                    <button className={`small-button full-color-border`}><span>Download</span></button>
+        <Fragment key={randomNumberGen()}>
+            <div style={separateSiblings}>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.colorButton} />
                 </div>
-                <div style={rowStyle}>
-                    <button className={`small-button small-button-with-svg full-color-main`}>
-                        <div className={`small-button-image-wrapper image-right`}>
-                            <span>Download</span>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faSearch} />
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-grey`}>
-                        <div className={`small-button-image-wrapper image-right`}>
-                            <span>Download</span>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-white`}>
-                        <div className={`small-button-image-wrapper image-right`}>
-                            <span>Download</span>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-border`}>
-                        <div className={`small-button-image-wrapper image-right`}>
-                            <span>Download</span>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                        </div>
-                    </button>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.greyButton} />
                 </div>
-                <div style={rowStyle}>
-                    <button className={`small-button small-button-with-svg full-color-main`}>
-                        <div className={`small-button-image-wrapper image-left`}>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faCommentAlt} />
-                            <span>Download</span>
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-grey`}>
-                        <div className={`small-button-image-wrapper image-left`}>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                            <span>Download</span>
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-white`}>
-                        <div className={`small-button-image-wrapper image-left`}>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                            <span>Download</span>
-                        </div>
-                    </button>
-                    <button className={`small-button small-button-with-svg full-color-border`}>
-                        <div className={`small-button-image-wrapper image-left`}>
-                            <FontAwesomeIcon className={`small-button-image`} icon={faAngleDown} />
-                            <span>Download</span>
-                        </div>
-                    </button>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteGreyButton} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteColorButton} />
+                </div>
+            </div>
+            <div style={separateSiblings}>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.colorButtonRightSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.greyButtonRightSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteGreyButtonRightSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteColorButtonRightSVG} />
+                </div>
+            </div>
+            <div style={separateSiblings}>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.colorButtonLeftSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.greyButtonLeftSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteGreyButtonLeftSVG} />
+                </div>
+                <div style={separateElements}>
+                    <CreateButtons options={smallButtonsArray.whiteColorButtonLeftSVG} />
                 </div>
             </div>
         </Fragment >

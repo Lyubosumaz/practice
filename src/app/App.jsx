@@ -1,126 +1,97 @@
 import React from 'react';
-import SmallTextSection from '../navigation/tabs/tabs-with-text/SmallTextSection';
-import MediumTextSection from '../navigation/tabs/tabs-with-text/MediumTextSection';
-import LargeTextSection from '../navigation/tabs/tabs-with-text/LargeTextSection';
-import SmallIconSection from '../navigation/tabs/tabs-with-icon/SmallIconSection';
-import MediumIconSection from '../navigation/tabs/tabs-with-icon/MediumIconSection';
-import LargeIconSection from '../navigation/tabs/tabs-with-icon/LargeIconSection';
-import PipeBreadcrumb from '../navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
-import ArrowBreadcrumb from '../navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
-import NumberPagination from '../navigation/pagination/number-pagination/NumberPagination';
-import ArrowPagination from '../navigation/pagination/arrow-pagination/ArrowPagination';
-import WordPagination from '../navigation/pagination/word-pagination/WordPagination';
-import DotPagination from '../navigation/pagination/dot-pagination/DotPagination';
-import DashPagination from '../navigation/pagination/dash-pagination/DashPagination';
-import ButtonPagination from '../navigation/pagination/button-pagination/ButtonPagination';
-// import FullColorButton from '../elements/big-buttons/color-button/FullColorButton';
-import SmallButtons from '../elements/small-buttons/SmallButtons';
-import BigButtons from '../elements/big-buttons/BigButtons';
-import CombinedButtons from '../elements/combined-buttons/CombinedButtons';
+import CombinedTabWithText from 'navigation/tabs/tabs-with-text';
+import CombinedTabWithIcons from 'navigation/tabs/tabs-with-icon';
+import PipeBreadcrumb from 'navigation/breadcrumbs/pipe-breadcrumbs/PipeBreadcrumb';
+import ArrowBreadcrumb from 'navigation/breadcrumbs/arrow-breadcrumbs/ArrowBreadcrumb';
+import CombinedPagination from 'navigation/pagination'
+// import FullColorButton from 'elements/big-buttons/color-button/FullColorButton';
+import SmallButtons from 'elements/small-buttons/SmallButtons';
+import BigButtons from 'elements/big-buttons/BigButtons';
+import CombinedButtons from 'elements/combined-buttons/CombinedButtons';
 
-import Inputs from '../forms/Inputs/Inputs'
+import Inputs from 'forms/Inputs/Inputs'
 
 import './app.scss';
-// Tabs
-import '../navigation/tabs/tab-content.scss';
-import '../navigation/tabs/tabs-with-text/tabs-with-text.scss';
-import '../navigation/tabs/tabs-with-icon/tabs-with-icon.scss';
-// Breadcrumbs
-import '../navigation/breadcrumbs/pipe-breadcrumbs/pipe-breadcrumbs.scss';
-import '../navigation/breadcrumbs/arrow-breadcrumbs/arrow-breadcrumbs.scss'
-// Pagination
-import '../navigation/pagination/arrow-pagination/arrow-pagination.scss';
-import '../navigation/pagination/word-pagination/word-pagination.scss';
-// Simple Pagination
-import '../navigation/pagination/number-pagination/number-pagination.scss';
-import '../navigation/pagination/dot-pagination/dot-pagination.scss';
-import '../navigation/pagination/button-pagination/button-pagination.scss';
-import '../navigation/pagination/dash-pagination/dash-pagination.scss';
+import 'navigation/tabs/tab.scss';
+import 'navigation/breadcrumbs/breadcrumbs.scss';
+import 'navigation/pagination/pagination.scss';
+import 'elements/elements.scss';
 
-
-import '../elements/big-buttons/big-button.scss';
-import '../elements/small-buttons/small-button.scss';
-import '../elements/combined-buttons/combined-buttons.scss';
-
-import '../forms/Inputs/Inputs.scss';
+import 'forms/Inputs/Inputs.scss';
 
 export default function App() {
   return (
-    <div className="app">
-      <div className="tabs section">
-        <h2>Tabs</h2>
-        <div className="container">
-          <div className="multi-line two-columns">
-            <div className="column">
-              <div className="multi-line-position tab-position">
-                <SmallTextSection />
-              </div>
-              <div className="multi-line-position tab-position">
-                <MediumTextSection />
-              </div>
-              <div className="multi-line-position tab-position">
-                <LargeTextSection />
-              </div>
+    <div className={`app`}>
+      <header className={`app-header-card`}>
+        <h1>UI Elements / Navigation</h1>
+        <span>Navigation elements tabs, breadcrumbs, pagination</span>
+      </header>
+      <div className={`app-container`}>
+        <div className={`container-wrapper tabs`}>
+          <header className={`container-header`}>
+            <h2>Tabs</h2>
+          </header>
+          <section className={`container-body two-columns`}>
+            <div style={{ marginRight: `2em` }}>
+              < CombinedTabWithText />
             </div>
-            <div className="column">
-              <div className="multi-line-position tab-position secondary">
-                <SmallIconSection />
-              </div>
-              <div className="multi-line-position tab-position secondary">
-                <MediumIconSection />
-              </div>
-              <div className="multi-line-position tab-position secondary">
-                <LargeIconSection />
-              </div>
+            <div >
+              <CombinedTabWithIcons />
             </div>
-          </div>
+          </section>
         </div>
-      </div>
-      <div className="breadcrumbs section">
-        <h2>Breadcrumbs</h2>
-        <div className="container">
-          <div className="multi-line">
+        <div className={`container-wrapper breadcrumbs`}>
+          <header className={`container-header`}>
+            <h2>Breadcrumbs</h2>
+          </header>
+          <section className={`container-body`}>
             <PipeBreadcrumb />
             <ArrowBreadcrumb />
-          </div>
+          </section>
+        </div>
+        <div className={`container-wrapper breadcrumbs`}>
+          <header className={`container-header`}>
+            <h2>Pagination</h2>
+          </header>
+          <section className={`container-body`}>
+            < CombinedPagination />
+          </section>
         </div>
       </div>
-      <div className="pagination section">
-        <h2>Pagination</h2>
-        <div className="container">
-          <div className="multi-line">
-            <div className="multi-line-position">
-              <NumberPagination />
-            </div>
-            <div className="multi-line-position">
-              <ArrowPagination />
-            </div>
-            <div className="multi-line-position">
-              <WordPagination />
-            </div>
-          </div>
-          <div className="one-line">
-            <div className="one-line-position">
-              <DotPagination />
-            </div>
-            <div className="one-line-position">
-              <ButtonPagination />
-            </div>
-          </div>
+      <header className={`app-header-card`}>
+        <h1>UI Elements / Buttons</h1>
+        <span>Different kinds of buttons. Regular, disabled, with icons</span>
+      </header>
+      <div className={`app-container`}>
+        <div className={`container-wrapper big-buttons`}>
+          <header className={`container-header`}>
+            <h2>Big Buttons</h2>
+          </header>
+          <section className={`container-body`}>
+            <BigButtons />
+          </section>
+        </div>
+        <div className={`container-wrapper big-buttons`}>
+          <header className={`container-header`}>
+            <h2>Small Buttons</h2>
+          </header>
+          <section className={`container-body`}>
+            <SmallButtons />
+          </section>
+        </div>
+        <div className={`container-wrapper big-buttons`}>
+          <header className={`container-header`}>
+            <h2>Combined Buttons</h2>
+          </header>
+          <section className={`container-body`}>
+            <CombinedButtons />
+          </section>
         </div>
       </div>
-      <div className="section">
-        <h2>Big Buttons</h2>
-        <BigButtons />
-      </div>
-      <div className="section">
-        <h2>Small Buttons</h2>
-        <SmallButtons />
-      </div>
-      <div className="section">
-        <h2>Combined Buttons</h2>
-        <CombinedButtons />
-      </div>
+      <header className={`app-header-card`}>
+        <h1>UI Elements / Forms</h1>
+        <span>All kinds of inputs and date pickers with hover, error and basic states</span>
+      </header>
       <div className="section">
         <h2>Inputs</h2>
         <Inputs />

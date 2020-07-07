@@ -1,0 +1,82 @@
+{
+    "colorButton": {
+        "type": "withoutImage",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-main"
+    },
+    "greyButton": {
+        "type": "withoutImage",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-grey"
+    },
+    "whiteGreyButton": {
+        "type": "withoutImage",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-white"
+    },
+    "whiteColorButton": {
+        "type": "withoutImage",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-border"
+    },
+    "colorButtonRightSVG": {
+        "type": "withRightSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-main",
+        "icon": "faSearch"
+    },
+    "greyButtonRightSVG": {
+        "type": "withRightSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-grey",
+        "icon": "faCommentAlt"
+    },
+    "whiteGreyButtonRightSVG": {
+        "type": "withRightSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-white",
+        "icon": "faAngleDown"
+    },
+    "whiteColorButtonRightSVG": {
+        "type": "withRightSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-border",
+        "icon": "faAngleDown"
+    },
+    "colorButtonLeftSVG": {
+        "type": "withLeftSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-main",
+        "icon": "faClock"
+    },
+    "greyButtonLeftSVG": {
+        "type": "withLeftSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-grey",
+        "icon": "faCommentAlt"
+    },
+    "whiteGreyButtonLeftSVG": {
+        "type": "withLeftSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-white",
+        "icon": "faPrint"
+    },
+    "whiteColorButtonLeftSVG": {
+        "type": "withLeftSVG",
+        "text": "Download",
+        "size": "big-button",
+        "color": "full-color-border",
+        "icon": "faCommentAlt"
+    }
+}

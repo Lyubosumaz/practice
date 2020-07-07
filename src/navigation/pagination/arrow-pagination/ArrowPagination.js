@@ -3,89 +3,105 @@ import CreatePageBar from '../CreatePageBar';
 import SetPaginationArray from '../SetPaginationArray';
 import pagination from '../pagination.json';
 
-import leftArrow from '../../../assets/images/pagination/arrow-left-solid.svg';
-import rightArrow from '../../../assets/images/pagination/arrow-right-solid.svg';
+import leftArrow from 'assets/images/pagination/arrow-left-solid.svg';
+import rightArrow from 'assets/images/pagination/arrow-right-solid.svg';
 
 export default function ArrowPagination() {
-    const onj = {
+    const obj = {
         numberOfPagination: pagination.arrowPagination.quantity,
         activePaginationIndex: pagination.arrowPagination.active,
         typeOfPagination: pagination.arrowPagination.type,
         paginationImages: [leftArrow, rightArrow],
         errorMessage: pagination.errorMessage,
     };
-    const [pages, setPages] = useState(SetPaginationArray(onj));
-    const [endPagination, setEndPagination] = useState(null);
-
-    function handleActive({ arr, id, clicked }) {
-        // console.log(arr);
-        // setPages(arr);
-    }
-
-    function showButtons() {
-        const arr = [...pages];
-        let indexOfActiveElement = null;
-        for (let index = 0; index < arr.length; index++) {
-            arr[index].show = false;
-            if (arr[index].isActive) { indexOfActiveElement = index; }
-        }
-        for (let index = 0; index < arr.length; index++) {
-            if (arr[index].isActive && arr[index + 4]) {
-                for (let i = 0; i < 4; i++) {
-                    arr[index + i].show = true;
-                }
-            }
-        }
-        // console.log(indexOfActiveElement);
-    }
-
-    function handleArrows(direction) {
-        let indexOfActiveElement = null;
-        const newPages = [...pages];
-
-        const pagesWithoutDots = [...pages.slice(0, pages.length - 2), ...pages.slice(pages.length - 1)];
-        console.log(pagesWithoutDots)
-        console.log(newPages)
-
-
-        switch (direction) {
-            case 'left':
-                for (let index = 0; index < newPages.length; index++) {
-                    if (newPages[index].isActive && newPages[index - 1]) {
-                        newPages[index - 1].isActive = true;
-                        newPages[index].isActive = false;
-                        break;
-                    }
-                }
-                setPages(newPages);
-                showButtons()
-                break;
-            case 'right':
-                for (let index = 0; index < newPages.length; index++) {
-                    if (newPages[index].isActive && newPages[index + 1]) {
-                        newPages[index + 1].isActive = true;
-                        indexOfActiveElement = newPages[index + 1];
-                        newPages[index].isActive = false;
-                        break;
-                    }
-                }
-                setPages(newPages);
-                showButtons()
-                break;
-            default:
-                console.log('console from WordPagination')
-                break;
-        }
-    }
+    const [pages, setPages] = useState(SetPaginationArray(obj));
 
     useEffect(() => {
         showButtons();
-        // console.log('+++++++++++++++++');
     }, []);
+
+    function saveAction(pagesArray) {
+        setPages(pagesArray);
+        showButtons();
+    }
+
+    function showButtons() {
+        const newPages = [...pages];
+        const activeIndex = indexOfActiveElement();
+
+        hideButtons();
+        if (!pages[activeIndex + 6]) {
+            for (let i = 0; i < 7; i++) {
+                newPages[(newPages.length - 1) - i].show = true;
+                if (newPages[(newPages.length - 1) - i].id === 'dots') {
+                    newPages[(newPages.length - 1) - i].show = false;
+                }
+            }
+        } else if (pages[activeIndex - 1] && pages[activeIndex + 3]) {
+            for (let i = 0; i < 4; i++) {
+                newPages[(activeIndex - 1) + i].show = true;
+            }
+            newPages[newPages.length - 2].show = true;
+            newPages[newPages.length - 1].show = true;
+        } else {
+            for (let i = 0; i < 4; i++) {
+                newPages[activeIndex + i].show = true;
+                newPages[activeIndex + i].show = true;
+            }
+            newPages[newPages.length - 2].show = true;
+            newPages[newPages.length - 1].show = true;
+        }
+        setPages(newPages);
+    }
+
+    function hideButtons() {
+        for (let index = 0; index < pages.length; index++) { pages[index].show = false; }
+    }
+
+    function handleActive({ arr, id, clicked }) {
+        saveAction(arr);
+    }
+
+    function handleArrows(direction) {
+        const newPages = [...pages];
+        const activeIndex = indexOfActiveElement();
+
+        switch (direction) {
+            case 'left':
+                if (newPages[activeIndex - 1] && newPages[activeIndex - 1].id !== 'dots') {
+                    newPages[activeIndex - 1].isActive = true;
+                    newPages[activeIndex].isActive = false;
+                } else if (newPages[activeIndex - 1] && newPages[activeIndex - 1].id === 'dots') {
+                    newPages[activeIndex - 2].isActive = true;
+                    newPages[activeIndex].isActive = false;
+                }
+                saveAction(newPages);
+                break;
+            case 'right':
+                if (newPages[activeIndex + 1] && newPages[activeIndex + 1].id !== 'dots') {
+                    newPages[activeIndex + 1].isActive = true;
+                    newPages[activeIndex].isActive = false;
+                } else if (newPages[activeIndex + 1] && newPages[activeIndex + 1].id === 'dots') {
+                    newPages[activeIndex + 2].isActive = true;
+                    newPages[activeIndex].isActive = false;
+                }
+                saveAction(newPages);
+                break;
+            default:
+                console.log('console from ArrowPagination')
+                break;
+        }
+    }
+
+    function indexOfActiveElement() {
+        for (let index = 0; index < pages.length; index++) {
+            if (pages[index].isActive) { return index; }
+        }
+    }
 
     return (
         <CreatePageBar
-            type={onj.typeOfPagination}
+            type={obj.typeOfPagination}
             array={pages}
             callback={handleActive}
             callbackActions={handleArrows}
